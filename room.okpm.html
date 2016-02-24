@@ -1,0 +1,736 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Totem infopoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-timepicker.css">
+     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    
+    <link rel="stylesheet" href="css/hover.css" media="all">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+        
+    <link rel="stylesheet" href="css/totem_css/building.css">
+    <link rel="stylesheet" href="css/totem_css/main.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+<!-- LOADER -->
+  <div class="pre-loader">
+    <div class="load-con">
+      <img src="img/scuola.png" class="animated fadeInDown" alt="">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container" style="width:100%">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+        <!--BACK BUTTON: ITS BEHAVIOR IS DEMANDED TO SCRIPTS.JS SCROLLMENU() -->
+          <a id="back-button2"  class="btn-rounded-colored  btn btn-lg toggle pull-left hvr-push " style="margin-left:6%;"><!-- style="margin-top:-47%;margin-left:90%;"> -->
+            <i class="fa fa-building btn-rounded-icon"></i>
+            <i class="fa fa-reply btn-rounded-icon"></i></a>
+
+          <a id="back-button"  class="btn-rounded-colored btn  btn-lg toggle pull-left hvr-push">
+            <i class="fa fa-institution btn-rounded-icon"></i>
+            <i class="fa fa-reply-all btn-rounded-icon"></i></a>
+
+          <a id="back-button-navbar" class="navbar-brand hvr-underline-from-center" href="#" >
+            <i class="fa fa-university" style="color: #ffffff;" ></i>
+            <i class="fa fa-angle-double-left" style="color: #ffffff;" ></i>
+            <span id="demonstrator_title" style="padding-left: 5px; padding-right:20px; color: #ffffff;"></span>
+          </a> 
+          <a id="back-button2-navbar" class="navbar-brand hvr-underline-from-center" href="#">
+            <i class="fa fa-building-o" style="color: #ffffff;" ></i>
+            <i class="fa fa-angle-left" style="color: #ffffff;" ></i>
+            <span id="building_title" style="padding-left: 5px;padding-right:20px; color: #ffffff;"></span> 
+          </a>
+          <a class="navbar-brand hvr-underline-from-center" href="#main">
+            <i class="fa fa-cube" style="color: #ffffff;" ></i>
+            <i class="fa fa-angle-double-up" style="color: #ffffff;" ></i>
+            <span id="brand_title" style="padding-left: 5px; color: #ffffff;"></span> 
+          </a> 
+        </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul id="navigation-bar" class="nav navbar-nav navbar-right" style="margin-right:5px;"> 
+              <li id ="power_navbar">
+                  <a href="#power_section">
+                      <i class="fa fa-area-chart" ></i>
+                      <span style="padding-left: 5px; padding-bottom: 5px;">Power</span> 
+                  </a> 
+              </li>
+                           
+              <li>
+                  <a href="#ambient">
+                      <i class="fa fa-line-chart"></i>
+                       <span style="padding-left: 5px;">Ambient</span> 
+                   </a> 
+              </li>
+
+                            <li>
+                                <a href="#feedback">
+                                    <i class="fa fa-pie-chart"></i>
+                                    <span style="padding-left: 5px;">Comfort</span> 
+                                </a> 
+                            </li>
+
+
+                            <li>
+                                <a href="#details">
+                                    <i class="fa fa fa-tachometer"></i>
+                                    <span style="padding-left: 5px;">Details</span> 
+                                </a> 
+                            </li>
+
+                            
+
+                           <!--  <li>
+                                <a href="#support"><i class="fa fa-map-marker"></i>
+                                <span style="padding-left: 5px;"> Where</span> 
+                                </a> 
+                            </li> -->
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid-->
+        </nav>
+
+    </header>
+
+
+ <section id="main">
+            <div class="container">
+                
+                <div id= "head" class="section-heading scrollpoint sp-effect3">
+                    <!--style="color: #bdbdbd"-->
+                    <h1 id="room_title"></h1>
+                    <div class="divider"></div>
+                   
+                </div>
+                
+                <!--SE SONO 4 col-md-3 col-xs-6 , SE SONO 3 col-xs-3-->
+                <div id ="room_menu" class="row row-centered scrollpoint sp-effect2">
+                   
+                </div>
+                      
+     
+            </div>
+
+
+        </section>
+
+
+
+    <div class="wrapper">
+
+
+<!-- ENERGY CHARTS SECTION -->
+    <section id="power_section">
+            <div class="container">
+
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Power Consumption Info Charts</h1>
+                    <div class="divider"></div>
+            <div class="filter", id="energy_filter">
+
+             <a  id="today_power" class="button js-filter-energy active sp-effect1" >
+               <div class="stacked-icons">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-calendar-o fa-stack-2x fa-fw"></i>
+                <strong class="fa-stack-1x calendar-text" id="e_today"></strong>
+
+              </span>
+                  <span>Today</span>
+            </div>
+            </a>
+
+
+
+             <a  id="week_power" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x fa-fw"></i>
+                    <strong class="fa-stack-1x">7</strong>
+
+                  </span>
+                      <span>Last 7 days</span>
+                </div>
+            </a>
+
+            <a  id="month_power" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">31</strong>
+
+                  </span>
+                      <span>This month</span>
+                </div>
+            </a>
+
+
+            <a  id="year_power" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">Y</strong>
+
+                  </span>
+                      <span>This year</span>
+                </div>
+            </a>
+             </div>
+
+
+                 <div id="powermeter_chart_ms" style="min-width: 300px; height: 400px; margin: 0 auto;"></div>
+
+                <!--  <div class="filter ">
+                <a href="javascript:void(0)" class="button js-filter-all active">Production</a>
+                <a href="javascript:void(0)" class="button js-filter-one">Consumption</a>
+
+                </div> -->
+                    </div>
+
+
+
+               </div>
+    </section>   
+
+
+
+
+<!-- AMBIENT CHARTS SECTION -->
+    <section id="ambient">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Ambient Charts</h1>
+                    <div class="divider"></div>
+                    
+                    <!-- <div id="ambient_chart" style="min-width: 300px; height: 400px; margin: 0 auto"></div> -->
+                   <!--  <div class= "container-fluid">
+                    <div class="row">
+                         <div class="col-xs-6 col-md-4 scrollpoint sp-effect1">
+                        <h4>From </h4>
+                         <input  type="text" placeholder="select a date"  id="from">
+                        </div>
+                        <div class="col-xs-6 col-md-4 scrollpoint sp-effect1">
+                        <h4>To </h4>
+                         <input  type="text" placeholder="select a date"  id="to">
+                        </div>
+                        <div class="col-xs-6 col-md-4 scrollpoint sp-effect1">
+                        <h4>From </h4>
+                         <input  type="text" placeholder="select a date"  id="datepicker">
+                        </div> 
+                       
+
+            </div>
+            </div> -->
+          
+    
+
+    <!-- <div class="input-append date form_datetime">
+    <input size="16" type="text" value="" readonly>
+    <span class="add-on"><i class="icon-th"></i></span>
+    </div> -->
+
+<div class="filter", id="temperature_filter">
+
+             <a  id="today_chart_button" class="button js-filter-all active sp-effect1" >
+               <div class="stacked-icons">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-calendar-o fa-stack-2x fa-fw"></i>
+                <strong class="fa-stack-1x calendar-text" id="t_today"></strong>
+
+              </span>
+                  <span>Today</span>
+            </div>
+            </a>
+
+
+
+        <a  id="week_chart_button" class="button js-filter-all  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x fa-fw"></i>
+                    <strong class="fa-stack-1x">7</strong>
+
+                  </span>
+                      <span>Last 7 days</span>
+                </div>
+            </a>
+
+      <a  id="month_chart_button" class="button js-filter-all sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">31</strong>
+
+                  </span>
+                      <span>This month</span>
+                </div>
+            </a>
+
+      <a  id="year_chart_button" class="button js-filter-all sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">Y</strong>
+
+                  </span>
+                      <span>This year</span>
+                </div>
+            </a>
+             </div>
+
+
+    <!--normal chart for co2 and luminance -->
+    <div class = "chart" id="temp_chart" style="height: 400px; margin: 0 auto"></div>
+    <div class = "chart" id="humid_chart" style="height: 400px; margin: 0 auto; display:none"></div>
+    <!--confrontation chart for temperature and humidity -->
+    <div class = "chart" id="co2_chart" style="height: 400px; margin: 0 auto; display: none;"></div>
+    <div class = "chart" id="luminance_chart" style="height: 400px; margin: 0 auto; display: none;"></div>
+   
+            
+
+                 <div class="filter" id="general_filter">
+                
+                <a id="temp_filter"  class="button js-filter-all clicked">
+                  <i class="fa fa-fire" style="margin-right:5px;"></i>
+                  Temperature 
+                  
+                </a>
+                <a id ="humid_filter" class="button js-filter-all ">
+              <i class="fa fa-tint " style="margin-right:5px;"></i>
+                  Humidity
+                  
+                </a>
+
+                <a id="co2_filter"  class="button js-filter-all " style="display:none;">
+              <i class="fa fa-cloud " style="margin-right:5px;"></i>
+                  CO<sub>2</sub> Level
+                  
+                </a>
+
+                <a id="luminance_filter"class="button js-filter-all " style="display:none;">
+              <i class="fa fa fa-lightbulb-o" style="margin-right:5px;"></i>
+                  Luminance
+                  
+                </a>
+                
+                </div>
+
+                    </div>
+            </div>
+        <!-- Load jQuery and bootstrap datepicker scripts -->
+        
+  
+            
+    </section>
+
+
+
+
+<!-- FEEDBACK CHARTS SECTION -->
+    <section id="feedback">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Comfort Charts</h1>
+                    <div class="divider"></div>
+                    <h3 class="sub-header">Comfort chart from users' feedback</h3>
+                      <!-- <i class="fa fa-info-circle" style="padding-left:100;"></i> -->
+                      
+
+                     <!--GRID 1x3 -->
+                <div class="row">
+                    <div class="col-xs-6 col-md-4 scrollpoint sp-effect1">
+                         <div id="temp_feedback" ></div>
+                    </div>
+                   
+                    <div class="col-xs-6 col-md-4 scrollpoint sp-effect3">
+                         <div id="humid_feedback"></div>
+                         
+                    </div>
+                    
+                    <div class="col-xs-6 col-md-4 scrollpoint sp-effect2">
+                         <div id="air_feedback"></div>
+                    </div>
+
+                    </div> <!--end Grid -->
+
+                    
+
+                    </div>
+            </div>
+    </section>
+
+<!-- WHERE SECTION AND MAP -->
+        <!-- <section id="support" class="doublediagonal">
+            <div class="container-fluid">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Where</h1>
+                    <div class="divider"></div>
+                   <div class="clearfix" id="map"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
+                                <div class="media">
+                                    <a class="pull-left" href="#" >
+                                        <i class="fa fa-map-marker fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Piazza Leonardo da Vinci, 32 Milano</h4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#" >
+                                        <i class="fa fa-envelope fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+                                            <a href="mailto:support@oleose.com">totem@polimi.com</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <a class="pull-left" href="#" >
+                                        <i class="fa fa-phone fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">+39 99999</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </section> -->
+
+
+<section id="details" class="anima">
+  <div class="container">
+<div class="section-heading scrollpoint sp-effect3">
+                    <h1>Details</h1>
+                    <div class="divider"></div>
+                    <p style=" color:#337ab7;">
+                      <!-- <i class="fa fa-info-circle" style="padding-left:100;"></i> -->
+
+                    </p>
+                    
+<div class="infograph">
+                            <sup style="height: 172px;" class="styler_bg_color"></sup>
+
+                            
+                            <div class="row">
+                             
+
+                               <!--  <div class="col-xs-6 col-md-4 col-sm-3 scrollpoint sp-effect1"> -->
+                                  <div class="col-xs-6  scrollpoint sp-effect1">
+                                
+
+                                   <div class="stacked-icons">
+                                 <i class="fa fa-thumbs-o-up fa-4x counter-icon"></i>
+                                 <strong id="room_count" class="counter">
+                                 </strong>
+
+                                  </div>
+
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+                                      
+                                        <div class="details_name" >Comfort feedbacks 
+                                        
+                                        </div>
+
+                                        <div class="details_text" >Number of users feedback with respect to the conditions of the 
+                                          ambient he/she inhabits. Thanks to users comfort feedback we can improve
+                                          the wellness of work spaces such as classrooms, offices, libraries and study rooms</div>
+                                          <!-- <a class="btn btn-default"> 
+                                            <i class="fa fa-th fa-2x pull-left"></i>
+                                            <span> Explore </span>
+                                          </a> -->
+
+                                    </div>
+                                </div>
+
+                               
+                                <!-- <div class="col-xs-6 col-md-4 col-sm-3 scrollpoint sp-effect1"> -->
+                                     <div class="col-xs-6 scrollpoint sp-effect1">
+
+
+                                    <div class="stacked-icons">
+                                 <i class="fa fa fa-rss fa-4x counter-icon" ></i>
+                                 <strong id="sensor_count" class="counter">
+                                 </strong>
+
+                                  </div>
+
+                                    
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+
+                                        <div class="details_name" >Smart Sensors
+                                        </div>
+                                     
+                                        <div class="details_text">Thanks to sensors  we are able to measure temperature,
+                                          humidity level, co2 level, luminance and energy consumption for the specific smart
+                                          space inside the campus. </div>
+                                    </div>
+                                </div>
+                               
+                                <!-- <div class="col-xs-6 col-md-4 col-sm-3 scrollpoint sp-effect1">
+
+                                
+
+      
+                                   <span class="fa-stack fa-5x" style="color: #337ab7;">
+                                    <i class="fa fa-circle-thin fa-stack-2x fa-2x"></i>
+                                    <strong class="fa-stack-5x" id="user_count" ></strong>
+
+                                  </span>
+
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+ 
+                                        <div class="details_name">Users </div>
+ 
+                                        <div class="details_text">Number of users involved</div>
+                                    </div>
+                                </div>
+                                 -->
+                            </div>
+                        </div>
+
+
+ </div>
+
+
+
+
+</div>
+
+</section>
+
+
+
+        <footer>
+            <div class="container">
+                <a  class="scrollpoint sp-effect3">
+                    <img id="footer_img" alt="" class="logo">
+                </a>
+                <!-- <div class="social">
+                    <a href="https://twitter.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    
+                    <a href="https://it-it.facebook.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div> -->
+                <div class="rights">
+                    <p>Copyright &copy; 2015</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    </div>
+
+    <!-- MAP DEFINITION -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+    
+    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+   
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    
+    <script src="js/scripts.js"></script>
+    <script src="js/totem_scripts/room.js"></script>
+    <script src="js/totem_scripts/meteo.js"></script>
+    <script src="js/totem_scripts/charts.js"></script>
+    <script src="js/totem_scripts/powermeters.js"></script>
+    <script>
+        $(document).ready(function() {
+          get_data_room();
+          var LUMINANCE_VARIABLE = 3;
+          var CO2_VARIABLE = 4;
+
+        $.when(   
+          get_variables_room(),
+          get_sensors_room(),
+          get_feedback_room('temperature'),
+          get_feedback_room('humidity'),
+          get_feedback_room('air')
+        ).then(function(variables,sensorArgs,feedbackTemp,feedbackHumid,feedbackAir){
+                //tempArgsDay,tempVariableDay,humidArgsDay,humidVariableDay
+              var parameters = location.search.substring(1).split("&");
+              var temp = parameters[0].split("=");
+              demonstrator_name = unescape(temp[1]);
+
+              var parameters2 = location.search.substring(1).split("&");
+              var temp2 = parameters2[1].split("=");
+
+              if(demonstrator_name=="Polimi"){
+                building_name = "Building "+unescape(temp2[1].split("-")[1]);
+                building_name = modifyString(building_name);
+              }else{
+                if(unescape(temp2[1].split("-")[1]) == "didattico"){
+                   building_name = "Modulo didattico";
+                }else{
+                   building_name = "Residenza ex-Emiliani";
+                }
+              }
+
+              document.getElementById("demonstrator_title").innerHTML = modifyString(demonstrator_name);
+              document.getElementById("building_title").innerHTML = (building_name);
+
+
+            /*--------------LISTENER ----------------*/
+            /*-----------------energy --------------*/
+              document.getElementById("today_power").onclick = show_day_powerdetails;
+              document.getElementById("week_power").onclick = show_week_powerdetails;
+              document.getElementById("month_power").onclick = show_month_powerdetails;
+              document.getElementById("year_power").onclick = show_year_powerdetails;
+    
+
+              /*-----------------Ambient --------------*/
+              document.getElementById("today_chart_button").onclick = show_today;
+              document.getElementById("week_chart_button").onclick = show_week;
+              document.getElementById("month_chart_button").onclick = show_month;
+              document.getElementById("year_chart_button").onclick = show_year;
+              document.getElementById("temp_filter").onclick = show_temp;
+              document.getElementById("humid_filter").onclick = show_humid;
+              document.getElementById("co2_filter").onclick = show_co2;
+              document.getElementById("luminance_filter").onclick = show_luminance;
+
+             /*-----------------Back button ----------*/
+              document.getElementById("back-button2").onclick=go_back_building;
+              document.getElementById("back-button").onclick=go_back_demonstrator;
+              document.getElementById("back-button2-navbar").onclick=go_back_building;
+              document.getElementById("back-button-navbar").onclick=go_back_demonstrator;
+        
+
+              if(modifyString(demonstrator_name)=="Polimi"){
+                document.getElementById("footer_img").src="img/1.png";
+              }else{
+                document.getElementById("footer_img").src="img/2.png";
+              }
+
+              if(!isSmartSpace(variables)){
+                  $("#power_section").remove();
+                  $("#power_navbar").remove();
+                  create_room_menu(false);
+              } else { //energy
+                  create_room_menu(true);
+                  /* default daily power usage */
+                  show_chart_powerdetails_window(AGGREGATE_15, DAY);
+              }
+
+      // document.getElementById("brand_title").innerHTML = modifyString(roomArgs[0].label);
+      // document.getElementById("room_title").innerHTML = modifyString(roomArgs[0].label);
+
+            for(i=0; i<variables[0].length; i++){
+              if(variables[0][i].identifier == LUMINANCE_VARIABLE){ //luminance
+                $("#luminance_filter").show("fast");
+                luminance_chart(); //initialize luminance chart
+              } else if(variables[0][i].identifier == CO2_VARIABLE) { //co2
+                $("#co2_filter").show("fast");
+                co2_chart(); //initialize c02 chart
+              }
+
+
+      }
+
+         //-----------------------ENERGY SECTION 
+         
+
+         
+        // --------------------DETAILED SECTION ------------------------
+        animate_counters_room(sensorArgs[0].length,parseInt(feedbackHumid[0][3])+parseInt(feedbackTemp[0][5])+parseInt(feedbackAir[0][2]));
+        
+        
+        //_-------------------AMBIENT SECTION
+        //  temperature_confrontation_chart(tempArgsDay[0],tempVariableDay[0])
+        // humidity_confrontation_chart(humidArgsDay[0],humidVariableDay[0]);
+
+
+        temperature_confrontation_chart();
+        humidity_confrontation_chart();
+        
+        draw_room_chart(1,1); //draw daily temperature chart
+        
+        //set period to daily and variable to temperature 
+        period = 1;
+        variable = 1;
+        
+
+
+        //--------------------COMFORT SECTION------------------
+        humid_feedback_chart(organize_FeedbackData(feedbackHumid[0]),parseInt(feedbackHumid[0][3]));
+        temp_feedback_chart(organize_FeedbackData(feedbackTemp[0]),parseInt(feedbackTemp[0][5]));
+        air_feedback_chart(organize_FeedbackData(feedbackAir[0]),parseInt(feedbackAir[0][2]));
+        //map_init();
+        
+      });
+
+    
+        var date = new Date();
+        document.getElementById('t_today').innerHTML = date.getDate();
+        
+        document.getElementById('e_today').innerHTML = date.getDate();
+        
+
+
+   }); 
+
+//WINDOW HAS JUST FINISH LOADING
+     </script> 
+    <script>
+       
+$(window).load(function(){
+         $('.pre-loader').fadeOut("slow");
+    });
+     </script> 
+    
+
+
+</body>
+
+</html>
+ 

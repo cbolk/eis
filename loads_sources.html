@@ -1,0 +1,516 @@
+  <!doctype html>
+  <!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+  <!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+  <!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+  <!--[if gt IE 8]><!-->
+  <html lang="en" class="no-js">
+  <!--<![endif]-->
+
+  <head>
+      <meta charset="UTF-8">
+
+      <title>Totem infopoint</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+      <!-- <link rel="shortcut icon" href="favicon.png"> -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      
+
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/bootstrap-timepicker.css">
+  <link href="css/hover.css" rel="stylesheet" media="all">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/slick.css">
+      <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+      
+      <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+      
+      <link rel="stylesheet" href="css/totem_css/building.css">
+       <link rel="stylesheet" href="css/totem_css/main.css">
+
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      
+  </head>
+
+  <body>
+
+  <!-- LOADER -->
+      <div class="pre-loader">
+          <div class="load-con">
+              <img src="img/scuola.png" class="animated fadeInDown" alt="">
+              <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div>
+          </div>
+      </div>
+
+  <header class="load_souces_header reset-bar">
+
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                 <div class="container" style="width: 100%;">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                    
+
+                    <a id="back-button" onclick="history.go(-1);" class="btn-rounded-colored btn btn-lg toggle pull-left hvr-push ">
+                    <i class="fa fa-institution" style="margin-top:40%;"></i>
+                     <i class="fa fa-reply" style="margin-top:40%;"></i></a>
+                      
+
+                          <!--load/sources -->
+                          <a class="navbar-brand hvr-underline-from-center" onclick="history.go(-1);" href="">
+                            
+                            <i class="fa fa-university" style="color: #ffffff;" ></i>
+                            <i class="fa fa-angle-left" style="color: #ffffff;" ></i>
+                            <span id="demonstrator_title" style="padding-left: 5px; padding-right:20px; color: #ffffff;"></span>
+                              
+                          </a>  
+                           <a class="navbar-brand hvr-underline-from-center" href="#main">
+                              <i class="fa fa-flash" style="color: #ffffff;" ></i>
+                              <i class="fa fa-angle-double-up" style="color: #ffffff;" ></i>
+                              <span id="brand_title" style="padding-left: 5px; color: #ffffff;"></span> 
+                          </a> 
+                      </div>
+
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul id="navigation-bar" class="nav navbar-nav navbar-right" style="margin-right:5px;">                             
+                              <li>
+                                  <a href="#trigenerator">
+                                      <i class="fa fa-recycle" ></i>
+                                      <span style="padding-left: 5px; padding-bottom: 5px;"> Tri-generation</span> 
+                                  </a> 
+                              </li>
+
+                              <li>
+                                  <a href="#panels">
+                                      <i class="fa fa fa-sun-o"></i>
+                                      <span style="padding-left: 5px;">Solar Panels</span> 
+                                  </a> 
+                              </li>
+
+                              <li>
+                                  <a href="#station">
+                                      <i class="fa fa fa-plug"></i>
+                                      <span style="padding-left: 5px;">Charging Stations</span> 
+                                  </a> 
+                              </li>
+
+                              
+
+                            
+
+                          </ul>
+                      </div>
+                      <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-->
+          </nav>
+
+      </header>
+
+         
+
+   <section id="main" class="reset-bar">
+              <div class="container" >
+                  
+                  <div id= "head" class="section-heading scrollpoint sp-effect3">
+                      <!--style="color: #bdbdbd"-->
+                      <h1 id="load_sources_title" style="color:#fff;"></h1>
+                      <div class="divider"></div>
+                     
+                  </div>
+                
+                        
+
+            <div id="load_menu" class="row row-centered scrollpoint sp-effect2">
+<!--                  <div class="col-md-4 ">
+                 
+                        <div  class="main-item-invert scrollpoint sp-effect1">
+                              <a href="#trigenerator">
+                              <i class="fa fa-recycle fa-2x hvr-bounce-in "></i>
+                              </a>
+                              <h3 class="h3-loads">Tri-generation</h3>
+                          </div>
+                  </div>
+
+                   <div class="col-md-4 ">
+                            <div class="main-item-invert scrollpoint sp-effect1" >
+                               <a href="#panels">
+                              <i class="fa fa-sun-o fa-2x hvr-bounce-in"></i>
+                              </a>
+                              <h3 class="h3-loads">Solar Panels</h3>
+                          </div>
+                    </div>
+
+                 <div class="col-md-4 ">
+                            <div class="main-item-invert scrollpoint sp-effect3" >
+                               <a href="#station">
+                              <i class="fa fa fa-plug fa-2x hvr-bounce-in"></i>
+                              </a>
+                              <h3 class="h3-loads">Charging Stations</h3>
+                          </div>
+                  </div> -->
+            </div>
+                     
+              </div>
+
+
+          </section>
+
+
+
+      <div class="wrapper">
+
+
+  <!-- ENERGY CHARTS SECTION -->
+      <section id="trigenerator" class="reset-bar">
+              <div class="container ">
+
+                  <div class="section-heading scrollpoint sp-effect3">
+                      <h1>Tri-generation</h1>
+                      <div class="divider"></div>
+                      <h3 class="sub-header"> Less fuel, more energy</h3> 
+                      <div class="container" >
+             <!--  <h2 style="text-align:center;"><i class="fa fa-recycle fa-spin"></i> Less fuel, more energy </h2>  -->          
+              <img src="img/trigeneratore.jpg" style="width:20%"class="section-image"></img>  
+              <p style="text-align:left;">Trigeneration or combined cooling, heat and power (CCHP), is the process by which some of the heat produced by a cogeneration plant is used to generate chilled water for air conditioning or refrigeration. By capturing the excess heat, that would be wasted in a conventional power plant, CCHP potentially reach an efficiency of up to 80%, for the best conventional plants. This means that less fuel needs to be consumed to produce the same amount of useful energy.</p>
+              
+       
+       </div>
+              
+                      </div>
+
+
+
+                 </div>
+      </section>   
+
+  <!-- METEO CHARTS SECTION -->
+      <section id="panels" >
+              <div class="container start-bar">
+                  <div class="section-heading scrollpoint sp-effect3" style="margin-bottom:0px;">
+                      <h1>Solar Panels</h1>
+                      <div class="divider"></div>
+                      <!-- <p style=" color:#337ab7;">Prova</p> -->
+                        <!-- <i class="fa fa-info-circle" style="padding-left:100;"></i> -->
+
+                        </div>
+                        <div class="filter", id="energy_filter">
+
+             <a  id="today_energy" class="button js-filter-energy active sp-effect1" >
+               <div class="stacked-icons">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-calendar-o fa-stack-2x fa-fw"></i>
+                <strong class="fa-stack-1x calendar-text" id="e_today"></strong>
+
+              </span>
+                  <span>Today</span>
+            </div>
+            </a>
+
+
+
+             <a  id="week_energy" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x fa-fw"></i>
+                    <strong class="fa-stack-1x">7</strong>
+
+                  </span>
+                      <span>This week</span>
+                </div>
+            </a>
+
+            <a  id="month_energy" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">31</strong>
+
+                  </span>
+                      <span>This month</span>
+                </div>
+            </a>
+
+
+            <a  id="year_energy" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">Y</strong>
+
+                  </span>
+                      <span>This year</span>
+                </div>
+            </a>
+             </div>
+                        <div id="energy_chart" style="min-width: 300px; height: 400px;"></div>
+                
+  </section>
+
+
+
+  <section id="station"class="anima reset-bar" >
+    <div class="container ">
+  <div class="section-heading scrollpoint sp-effect3">
+                      <h1>Charging Stations</h1>
+                      <div class="divider"></div>
+                      <h3 class="sub-header">
+                         Energy in motion 
+                      </h3>
+                      
+  <div class="infograph scrollpoint sp-effect5">
+                              <sup style="height: 172px;" class="styler_bg_color"></sup>
+
+                              <div class="container" >
+              <!-- <h2 style="text-align:center;"><i class="fa fa-power-off"></i> Energy in motion </h2>  -->          
+              <img src="img/colonnina.jpg" style="display:inline; float:right;"></img>  
+              <p style="text-align:left;">A recharging station is an element of a Smart Grid that supplies electric energy for the recharging of electric vehicles. In Milan, charging stations are provided by A2A S.p.A. utility company and accesibles through a subscription. Recharging a large battery pack presents a high load on the electrical grid, but this can be scheduled for periods of reduced load or reduced electricity costs. In order to schedule the recharging, either the charging station or the vehicle can communicate with the smart grid. Some plug-in vehicles also allow the vehicle operator to control recharging through a web interface or mobile applications.  </p>
+              
+       
+       </div>
+                              <div class="row  ">
+                               
+
+                             <!-- ICON WITH COUNTER AND TEXT ABOVE-->
+                             <!-- FIRTS -->
+                            <div class="col-lg-3 col-md-3  ">
+                               <div class="stacked-icons">
+                                 <i class="fa fa-child fa-4x counter-icon"></i>
+                                 <strong id="user_count" class="counter">
+                                 </strong>
+
+                                  </div>
+
+                                  <!-- TExt -->
+                                      <div class="desc styler_bg_color">
+                                          <i class="styler_border_color"></i>
+                                        
+                                          <div class="details_name" >Number of users 
+                                          </div>
+
+                                          <!-- <div class="details_text" >Number of different users</div>  -->
+                                            
+   
+                                      </div>
+                                  </div>
+
+                          <!-- SECOND ICON WITH COUNTER AND TEXT ABOVE -->
+                          <div class="col-lg-3 col-md-3 ">
+                            <div class="stacked-icons"> 
+                               <i class="fa fa-car fa-4x counter-icon"></i>
+  		                  			<strong id="cars_count" class="counter"></strong> 
+  				                  </div>
+                                      
+                                      <div class="desc styler_bg_color">
+                                          <i class="styler_border_color"></i>
+
+                                          <div class="details_name">Cars recharged
+                                       
+                                          </div>
+                                       
+                                           <!-- <div class="details_text" >Total recharged cars </div>  -->
+                                      </div>
+                                  </div>
+                                 
+                        <!--THIRD ICON WITH COUNTER AND TEXT ABOVE -->
+                      <div class="col-lg-3 col-md-3 ">
+  			                   	<div class="stacked-icons">
+                                          <i class="fa fa-clock-o fa-4x" style=" color:#337ab7;"></i>
+                                          <strong id="days_count" style=" color:#337ab7; font-size:50px;margin-left:20px;"></strong>
+
+                                  </div>
+                                      <div class="desc styler_bg_color">
+                                          <i class="styler_border_color"></i>
+   
+                                          <div class="details_name" >Days of recharge  </div>
+   
+                                          <!--  <div class="details_text">Amount of CO<sub>2</sub> savings</div>  -->
+                                      </div>
+                                  </div>
+                                  
+                        
+                        <!--FORTH ICON WITH COUNTER -->
+                        <div class="col-lg-3 col-md-3 ">
+                            <div class="stacked-icons">
+                                          <i class="fa fa-lightbulb-o fa-4x" style=" color:#337ab7;"></i>
+                                          <strong id="energy_counter" style=" color:#337ab7; font-size:50px;margin-left:20px;"></strong>
+
+                                  </div>
+                                      <div class="desc styler_bg_color">
+                                          <i class="styler_border_color"></i>
+   
+                                          <div class="details_name" > Energy consumed  (GWh)</div>
+   
+                                          <!--  <div class="details_text">Amount of CO<sub>2</sub> savings</div>  -->
+                                      </div>
+                                  </div>     
+
+                              </div>
+
+                          </div>
+
+
+   </div>
+
+
+
+
+  </div>
+
+  </section>
+
+<section id="video" style="display:none;" >
+      <div class="container ">
+      <div class="section-heading scrollpoint sp-effect3">
+                   <h1>Details</h1>
+                      <div class="divider"></div>
+
+
+                          <p style="text-align:left;">There are severals photovoltaic systems and thermal plants at the University of Brescia. These videos shows in details how these systems works and how they help the university to produce green energy.</p>
+                    <div class="row  ">
+                        <div class="col-lg-6 col-md-6 ">
+                             <video width="320" height="240" controls>
+                               <source src="/totem/video/1.mp4" type="video/mp4">
+                             </video> 
+                       </div>
+
+                       <div class="col-lg-6 col-md-6 ">
+                             <video width="320" height="240" controls>
+                               <source src="/totem/video/1.mp4" type="video/mp4">
+                             </video> 
+                       </div>
+                      </div>
+
+
+  </div>
+  </div>
+
+
+</section>
+
+          <footer>
+              <div class="container">
+                  <a  class="scrollpoint sp-effect3">
+                      <img id="footer_img" alt="" class="logo">
+                  </a>
+                  <!-- <div class="social">
+                      <a href="https://twitter.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                      
+                      <a href="https://it-it.facebook.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                  </div> -->
+                  <div class="rights">
+                      <p>Copyright &copy; 2015</p>
+                  </div>
+              </div>
+          </footer>
+
+
+
+
+      </div>
+
+      <!-- MAP DEFINITION -->
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/placeholdem.min.js"></script>
+      
+      <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+      <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+      <script src="js/waypoints.min.js"></script>
+     
+       <script src="http://code.highcharts.com/stock/highstock.js"></script>
+      
+    <script src="js/scripts.js"></script>
+    <script src="js/totem_scripts/load-sources.js"></script>
+    <script src="js/totem_scripts/meteo.js"></script>
+     <script src="js/totem_scripts/charts.js"></script>
+     <script src="js/totem_scripts/panel_chart.js"></script>
+
+      <script>
+          $(document).ready(function() {
+
+            $.when(get_data_load_sources() ).then(function(dataArgs){ 
+          
+      demonstrator_name = modifyString(dataArgs.label);
+      document.getElementById("brand_title").innerHTML = "Loads and sources";
+      document.getElementById("load_sources_title").innerHTML = "Loads and sources: "+demonstrator_name
+
+      document.getElementById("demonstrator_title").innerHTML = demonstrator_name;
+        
+      if(demonstrator_name=="Polimi"){
+                document.getElementById("footer_img").src="img/1.png";
+                create_sections(0);
+              }else{
+                document.getElementById("footer_img").src="img/2.png";
+                create_sections(1);
+              }
+
+              var img="url(img/loads_sources2.jpg) no-repeat center center scroll";
+              
+              // document.getElementById("top").style.backgroundImage=img;
+              $("#main").css({"background":img});
+              $("#main").css({"background-size":"cover"});
+
+           
+        });
+
+
+           //-----------------------ENERGY SECTION 
+           //energy_chart();
+           $.when(get_variable_day('1')).then(function(powerDay){
+              //panel_energy_chart(powerDay);
+              //draw_daily_panel_chart(powerDay);
+              draw_daily_panel_chart(calculate_energy(powerDay,1));
+
+            }); //potenza attiva
+           
+
+           /*--------------LISTENER ----------------*/
+        /*-----------------energy --------------*/
+        document.getElementById("today_energy").onclick = show_day_panel_energy;
+
+        document.getElementById("week_energy").onclick = show_week_panel_energy;
+   
+        document.getElementById("month_energy").onclick = show_month_panel_energy;
+
+        document.getElementById("year_energy").onclick = show_year_panel_energy;
+      var date = new Date();
+        document.getElementById('e_today').innerHTML = date.getDate();
+          // --------------------DETAILED SECTION ------------------------
+          
+          
+          animate_counters_loads_sources(5,150,200,20);
+          
+          
+    
+
+      
+
+          
+
+
+     }); 
+
+  //WINDOW HAS JUST FINISH LOADING
+      $(window).load(function(){
+           $('.pre-loader').fadeOut('slow');
+      });
+         
+
+           </script> 
+
+
+  </body>
+
+  </html>
+   

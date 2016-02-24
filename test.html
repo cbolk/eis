@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>deferred.done demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--script src="js/totem_scripts/room.js"--></script>
+    <script src="js/totem_scripts/powermeters.js"></script>
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+   <script src="js/totem_scripts/charts.js"></script>
+</head>
+<body>
+<div id="energy_chart" style="min-width: 300px; height: 400px; margin: 0 auto;"></div>
+<hr/>
+<div id='finito'></div>
+<div id='404'></div>
+<hr/>
+<div id='400'></div>
+<hr/>
+<div id='408'></div>
+
+
+<script>
+var urls = [ '404','400','408' ],
+    defers = [], defer;
+
+var urlsLength = urls.length;
+var link;
+var i;
+power_chart_confrontation(urls);
+/*
+
+for(i = 0; i < urlsLength; i++ ){
+    link = 'http://131.175.56.243:8080/measurements/15min/sensor/variable/' + urls[ i ] + "/2016/01/28";
+    console.log("link" + link);
+    results = [];
+    defer = f(link,urls[ i ], urls[ i ], "W").done(function(pmdata){
+      console.log(i + "almost " + pmdata.length);
+      results = results.concat(pmdata);
+    });
+    defers.push(defer);
+}
+
+$.when.apply($, defers).done(function(){
+    console.log("finished?");
+    var displayDiv = document.getElementById('finito');
+    nresults = results.length;
+    //prepare_powerdata(results,1);
+    var txt = '';
+//    for(i = 0; i < nresults;i++)
+//      txt = txt + "<div>[" + results[i].timestamp + "," + results[i].value + "],</div>";
+//    var flats= [];
+//    var nresults = results.length;
+//    for(var j = 0; j < nresults; j++){
+//      var ndata =  results[j].length;
+//      for(var k = 0; k < ndata; k++)
+//        flats.push(results[j][k]);
+//    }
+//    results.map(function (i) { return i });
+    displayDiv.innerHTML = txt;
+    powerchart_details(urls);
+});
+*/
+function f(link, pos, label, unit){
+  var dfd = $.Deferred();
+  $.ajax({
+        url: link,
+
+    }).done(function(response){ 
+      //var txt =  "<ul>";
+      var idl = pos;
+      $.each(response, function(key, m){
+        m.label = label;
+        m.unit = unit;
+        //txt = txt + "<li>" + key + ":" + m.timestamp + " " + m.value + " " + m.unit + "</li>";
+      });
+      //txt = txt + "</ul>";
+      //var displayDiv = document.getElementById(idl);
+      //displayDiv.innerHTML =txt;
+      dfd.resolve(response);
+    });
+  return dfd.promise();
+}
+
+    function power_chart_confrontation(names) {
+     var seriesOptions = [],
+     seriesCounter = 0,
+          // Create the chart
+          // create the chart when all data is loaded
+          createChart = function () {
+
+            $('#energy_chart').highcharts('StockChart', {
+
+              rangeSelector: {
+                selected: 4
+              },
+              chart :{
+                pinchType : null,
+                zoomType:null,
+              },
+              navigator : {
+                enabled : false
+              },
+              exporting: {
+               enabled: false
+             },
+
+             scrollbar: {
+              enabled:false
+            },
+
+            credits: {
+              enabled: false
+            },
+            rangeSelector : {
+              enabled: false
+            },
+
+            xAxis:{
+              startOnTick: true,
+              tickInterval:(24*3600*1*1000)
+            },
+            yAxis: {
+              labels: {
+                formatter: function () {
+                  return (this.value > 0 ? ' + ' : '') + this.value + 'GWh';
+                }
+              },
+              plotLines: [{
+                value: 0,
+                width: 2,
+                color: 'silver'
+              }]
+            },
+
+            plotOptions: {
+              series: {
+                compare: 'value'
+              }
+            },
+
+            tooltip: {
+              pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.change}%)<br/>',
+              valueDecimals: 2
+            },
+
+            series: seriesOptions,
+          });
+};
+
+$.each(names, function (i, name) {
+  var nameColor ='';
+  if(name == '400'){
+    nameColor = 'forza';
+  }else if(name == '404'){
+    nameColor = 'luci';
+  } else {
+    nameColor = 'clima';
+  }
+  var link = "http://131.175.56.243:8080/measurements/15min/sensor/variable/" + name + '/2016/01/28/';
+  $.getJSON(link,    function (data) {
+
+
+    seriesOptions[i] = {
+      name: nameColor,
+      data: data,
+      color : getColorEnergy1[nameColor]
+    };
+
+              // As we're loading the data asynchronously, we don't know what order it will arrive. So
+              // we keep a counter and create the chart when all the data is loaded.
+              seriesCounter += 1;
+
+              if (seriesCounter === names.length) {
+                createChart();
+              }
+            });
+});
+}
+  var getColorPowerOffice = {
+    'forza' : '#ffbe00',
+    'luci' : '#9b9b9b',
+    'clima' : '#1aa130'
+  };
+</script>
+ 
+</body>
+</html>

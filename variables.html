@@ -1,0 +1,122 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Totem infopoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-timepicker.css">
+     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    
+    <link rel="stylesheet" href="css/hover.css" media="all">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+        
+    <link rel="stylesheet" href="css/totem_css/building.css">
+    <link rel="stylesheet" href="css/totem_css/main.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="js/totem_scripts/utilities.cb.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+   <div class="filter" id="filters"></div>    
+
+    <section id="variable_section">
+      <div  class="container">
+        <div class="section-heading scrollpoint sp-effect3">
+          <h1 id="variable_title"></h1>
+          <div id="variable_section_menu"></div>
+          <div id="variable_chart_ms" style="min-width: 300px; height: 400px; margin: 0 auto;"></div>
+        </div>
+      </div>
+    </section>    
+
+    <footer>
+        <div class="container">
+            <a  class="scrollpoint sp-effect3">
+                <img id="footer_img" alt="" class="logo">
+            </a>
+            <div class="rights">
+                <p>Copyright &copy; 2015</p>
+            </div>
+        </div>
+    </footer>
+  </div>
+
+  <!-- MAP DEFINITION -->
+  <!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+    
+    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+   
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    
+    <script src="js/scripts.js"></script>
+    <script src="js/totem_scripts/room.js"></script>
+    <script src="js/totem_scripts/meteo.js"></script>
+    <script src="js/totem_scripts/charts.js"></script>
+    <script src="js/totem_scripts/powermeters.js"></script>
+    <script src="js/totem_scripts/local.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('#variable_section_menu').html(menu_section("variable", "chart_button", "js-filter-all"));
+
+      get_data_room();
+      get_variables_room().done(function (variables){
+            //console.log(measures.length); 
+              var parameters = location.search.substring(1).split("&");
+              var temp = parameters[0].split("=");
+              demonstrator_name = unescape(temp[1]);
+
+              var varids = [];
+              for(var ip = 0; ip < parameters.length; ip++){
+                temp = parameters[ip].split("=");
+                if(temp[0] == "vid")
+                  varids.push(temp[1]);
+              }
+              /* varids includes all desired variable ids*/
+
+              var selvariables = [];
+              for(var iv = 0; iv < variables.length; iv++)
+                if(varids.indexOf(variables[iv].variableid.toString()) >= 0)
+                  selvariables.push(variables[iv]);
+
+              document.getElementById("today_chart_button").onclick = show_day_variable;
+              document.getElementById("week_chart_button").onclick = show_week_variable;
+              document.getElementById("month_chart_button").onclick = show_month_variable;
+              document.getElementById("year_chart_button").onclick = show_year_variable;
+    
+              show_chart_variable_window(AGGREGATE_15, DAY, selvariables, "Temperature");
+      });
+    }); 
+    </script> 
+</body>
+</html>
+ 

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Totem infopoint</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Custom CSS -->
+    <link href="css/totem_css/demonstrator.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link href="css/totem_css/main.css" rel="stylesheet"> -->
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <!--favicon-->
+    <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+    <!-- BACK BUTTON  -->
+    <a style="margin-top:5px;" id="back-button-dark"  onclick="javascript:go_back();" class="btn-rounded-dark btn btn-dark  btn-lg hvr-push  pull-left">
+        <i class="fa fa-reply btn-rounded-icon" ></i>
+        <i class="fa fa-home btn-rounded-icon"></i>
+
+    </a>
+        <!-- 
+        <a  onclick="history.go(-1);" class="btn btn-dark btn-lg toggle pull-left">
+        <i class="fa fa-reply" style="margin-top:40%;"></i></a> -->
+    <!-- <nav id="sidebar-wrapper">
+        
+    </nav> -->
+
+    <!-- Header -->
+    <header id="top" class="header ">
+        <div class="text-vertical-center animated fadeIn ">
+            <h1 style=" background-color: rgba(0,0,0,0.4);" id="demonstrator_title"></h1>
+            <h3 style="background-color: rgba(0,0,0,0.4);margin-top:0px;">Smart Campus as Urban Open Labs</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg hvr-wobble-vertical" style="border-radius:100%; height: 80px;width: 80px; outline:none;">
+		<i class="fa fa-angle-double-down fa-2x"style="padding-top:25%;"></i></a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img class="img-portfolio img-responsive" src="img/scuola.png">
+
+                </div>
+            </div>
+
+        </div>
+ 
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>The Demonstrator</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            
+                            <div  class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-building fa-stack-1x text-primary" style="padding-left: 4px;"></i>
+                            </span>
+                                <h3>
+                                    <strong>Smart Buildings</strong>
+                                </h3>
+                                <p id="smart_building_description">Smart buildings are a new generation of indoor
+                                    environments that thanks to the cooperation of different
+                                    smart objects (e.g., sensors, actuators, appliances) aim at
+                                    increasing the energy efficiency of the building itself and
+                                    the occupants comfort. While energy use and occupant comfort are crucial to any organization and therefore require human involvement in the decision-making, technologies such as sensors and smart meters will be the key enabler, providing building operators with the tools and information they need to make smart choices. </p>
+
+                                
+                            
+                        
+                    
+                    <div id ="smart_div">
+             <a  id="show_smart_building" class="btn btn-light hvr-grow"></a>
+         
+            </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flash fa-stack-1x text-primary"></i>
+                            </span>
+                                <h3>
+                                    <strong>Loads and Sources</strong>
+                                </h3>
+                                <p>Renewable energy is generally defined as energy that comes from resources which are naturally replenished on a human timescale such as sunlight, wind, rain, tides, waves, and geothermal heat. Renewable energy replaces conventional fuels in distinct areas, where the most relevant is electricity generation.
+                                    The EU's Renewable energy directive sets a binding target of 20% final energy consumption from renewable sources by 2020, that's why SCUOLA project aims at provide different energy sources to provide sustainable energy for your campus. Explore the loads and sources installed at your university! </p>
+             <a href="#load_sources" id="show_load_sources" style="outline:none;"class="btn btn-light hvr-grow">Explore!
+                    <i class="fa fa-external-link" style="margin-left:5px;"></i>
+            </a>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-leaf fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Nature Friendly</strong>
+                                </h4>
+                                <p></p>
+                              
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-child fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>User Friendly</strong>
+                                </h4>
+                                <p></p>
+                              
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Callout -->
+  <!--   <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Vertically Centered Text</h1>
+        </div>
+    </aside>
+-->
+
+
+<!-- <div class="row" id="menu_buildings">  -->
+<section id="smart_building" class="services bg-primary" style="display:none;">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 id="smart_section_title"></h2>
+                    <hr class="small">
+
+                    <div class="row" id="menu_buildings">
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+
+    </section>
+
+
+    <section id="load_sources" class="services bg-primary" style="display:none">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 id="smart_section_title"></h2>
+                    <hr class="small">
+
+                    <div class="row" id="menu_buildings">
+                        
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+
+    </section>
+
+
+
+    <!-- jQuery -->
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    // $("#menu-close").click(function(e) {
+    //     window.history.back()
+    // });
+
+    //--------------------------BUTTON LISTENER -----------------
+    //----BACK BUTTON
+    function go_back(){
+        window.open("http://eis.deib.polimi.it/totem/","_self");
+    }
+    
+
+    //Show Smart building section
+
+    
+    //Open loads/sources page for the current district
+    
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+    </script>
+    
+    <script src="js/totem_scripts/demonstrator.js"></script>
+<script>
+        $(document).ready(function() {
+
+
+            //check if it's the first time the page is opened (demonstrator.js)
+            checkFirstTime(location.hash.substring(1).split("#"));
+    
+
+    //------------SET BACKGROUD IMAGE ACCORDING WITH THE DEMONSTRATOR -----------
+            var parameters = location.search.substring(1).split("&");
+            var temp = parameters[0].split("=");
+            id = unescape(temp[1]);
+
+            
+            var img="url(img/bg_"+id+".jpg)no-repeat center center scroll";
+            
+            // document.getElementById("top").style.backgroundImage=img;
+            $("header").css({"background":img});
+            $("header").css({"background-size":"cover"});
+
+
+    //---------------GET DATA -----------------------------
+    $.when( 
+          get_data_demonstrator(),
+          get_buildings()
+          
+
+    ).then(function(dataArgs,buildingArgs){ 
+
+    //---------PERSONALIZE DEMONSTRATOR PAGE ------------
+        document.getElementById("demonstrator_title").innerHTML = "Demonstrator "+modifyString(dataArgs[0].label);
+        document.getElementById("smart_section_title").innerHTML = "Smart Buildings at "+modifyString(dataArgs[0].label);
+           
+        //-----------SMART BUILDING SECTION ---------
+        
+        //if there are buildings, create the smart_building_section if not, remove "show_smart_building" button
+        if(buildingArgs[0].length==0){
+            // var elem = document.getElementById('show_smart_building');
+            // elem.parentNode.removeChild(elem);
+            document.getElementById("show_smart_building").style.display ="none";
+            var paragraph = document.getElementById("smart_building_description");
+            paragraph.appendChild(document.createElement("br"));
+            text = "In the context of the SCUOLA Project, the "+modifyString(dataArgs[0].label)+" demonstrator has no Smart Buildings.";
+            paragraph.appendChild(document.createTextNode(text));
+            //$("#show_smart_building").hide("fast");
+        }else{
+        create_building_section(buildingArgs[0],modifyString(dataArgs[0].label));
+        }
+
+
+    //---------LOADS/SOURCES SECTION -------------
+            create_load_sources_section(modifyString(dataArgs[0].label));
+       
+
+        
+      });
+
+   }); 
+
+     </script> 
+       
+
+         </script> 
+</body>
+
+</html>

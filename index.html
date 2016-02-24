@@ -1,0 +1,190 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Totem infopoint</title>
+    <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- META -->
+    <meta hhtp-equiv ="author" content = "Giovanni Bettinazzi"/>
+    <meta name="robots" content="NOINDEX,NOFOLLOW" />
+    <meta name="googlebot" content="NOARCHIVE">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-eq uiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+
+
+
+    <!--ANIMATIONS -->
+    
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css">  -->
+    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="css/totem_css/main.css">
+    
+   
+    
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+
+
+<!-- LOADER -->
+<!--    <div class="pre-loader">
+        <div class="load-con">
+            <img src="img/scuola.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+-->
+
+
+ <section id="main">
+            <div class="container">
+                
+                <div id= "head" class="section-heading animated bounceInUp">
+                   
+                    <img src="img/scuola.png" style="max-width:100%">
+                    <div class="divider"></div>
+                    <h3 style=" color:#337ab7;"> <b>S</b>mart <b>C</b>ampus as <b>U</b>rban <b>O</b>pen 
+                        <b>La</b>bs </h3>
+                   
+                </div>
+
+                <div id ="first_row" class="row">
+                    <div  id="polimi" class="col-md-4  col-xs-6">
+                        <div  class="main-item animated bounceInLeft ">
+                            <!-- <i class="fa fa-home fa-2x" id="polimi-icon" ></i> -->
+                            <img  src="img/1.png"></img>
+                            <h3 style="font-weight:bold;">POLIMI</h3>
+                            
+                        </div>
+                    </div>
+                    <div id="unibs" class="col-md-4  col-xs-6" >
+                        <div class="main-item animated bounceInLeft">
+                            <!-- <i class="fa fa-home fa-2x " id="unibs-icon" ></i> -->
+                            <img  src="img/2.png"></img>
+                            <h3 style="font-weight:bold;">UNIBS</h3>
+                            
+                        </div>
+                    </div>
+                    <div id="residential" class="col-md-4 col-xs-6" >
+                        <div class="main-item animated bounceInRight">
+                            <!-- <i class="fa fa-home fa-2x " id="residential-icon" ></i> -->
+                             <img  src="img/3.png"></img>
+                            <h3 style="font-weight:bold;">Residential</h3>
+                           
+                        </div>
+                    </div>
+                  <!--  <div id="future" class="col-md-3 col-xs-6" >
+                        <div class="main-item animated bounceInRight">
+                            <i class="fa fa-question fa-2x " id="future-icon" ></i>
+                            
+                            <h3 style="font-weight:bold;">...</h3>
+                            
+                        </div> -->
+                    </div>  
+                    </div>
+                        
+                       
+                   
+            </div>
+        </section>
+
+
+ 
+
+   
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+   <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+    <script src="js/waypoints.min.js"></script>
+     <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+
+<script src="js/scripts.js"></script>
+<script src="js/totem_scripts/main.js"></script>
+
+    <script>
+ $(document).ready(function() {
+            appMaster.preLoader();
+// poli  = document.getElementById("polimi-icon");
+//         unibs = document.getElementById("unibs-icon");
+//         residential = document.getElementById("residential-icon");
+//         future = document.getElementById("future-icon");
+    
+
+
+    // TweenMax.from([poli, unibs, residential,future], 0.2, {scale:40,opacity:0.3,ease:Bounce.easeOut});
+    $("#polimi").click(polimi_clicked);
+    $("#unibs").click(unibs_clicked);
+    $("#residential").click(residential_clicked);
+    
+    //$("#future").click(future_clicked);
+    
+
+        });  
+        
+
+         </script> 
+    
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+           <h4 class="modal-title" style="font-size:19pt;">
+            <i class="fa fa-exclamation-triangle"></i>
+            Server error</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:15pt;">We are sorry, our server is temporarily unable to serve your request. Please try again later <i class="fa fa-hand-spock-o"></i>
+        </p>
+          
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+</body>
+
+</html>

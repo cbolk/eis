@@ -1,0 +1,680 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Totem infopoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    
+    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+    
+    <link rel="stylesheet" href="css/totem_css/building.css">
+    <link rel="stylesheet" href="css/totem_css/main.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+
+  
+<!-- LOADER -->
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="img/scuola.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<header>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container" style="width: 100%;">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                          
+<!--BACK BUTTON: ITS BEHAVIOR IS DEMANDED TO SCRIPTS.JS SCROLLMENU() -->
+                  <a id="back-button" class="btn-rounded-colored  btn btn-lg toggle pull-left hvr-push">
+                  <i class="fa fa-institution btn-rounded-icon" ></i>
+                   <i class="fa fa-reply btn-rounded-icon" ></i></a>
+
+
+                    
+                        <a id="back-button-navbar" class="navbar-brand hvr-underline-from-center"  href="#">
+                          
+                          <i class="fa fa-university" style="color: #ffffff;" ></i>
+                          <i class="fa fa-angle-left" style="color: #ffffff;" ></i>
+                          <span  id="demonstrator_title" style="padding-left: 5px; padding-right:20px; color: #ffffff;"></span>
+                            
+                        </a> 
+                         <a class="navbar-brand hvr-underline-from-center" href="#main">
+                          
+                          <i class="fa fa-building-o " style="color: #ffffff;" ></i>
+                          <i class="fa fa-angle-double-up" style="color: #ffffff;" ></i>
+                          <span id="brand_title" style="padding-left: 5px; color: #ffffff;"></span> 
+                            
+                        </a> 
+
+                        
+                          
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ <span  id="demonstrator_title" style="padding-left: 5px; padding-right:20px; color: #ffffff;"></span>
+                        <ul id="navigation-bar" class="nav navbar-nav navbar-right" style="margin-right:5px;"> 
+                            <!--<li><a href="#features">features</a>
+                            </li> -->
+                            
+                            <li>
+                                <!-- <a href="#energy">
+                                    <i class="fa fa-area-chart" ></i>
+                                    <span style="padding-left: 5px; padding-bottom: 5px;"> Energy</span> 
+                                </a>  -->
+                            </li>
+                           
+                        
+                            <li>
+                                <a href="#ambient">
+                                    <i class="fa fa-line-chart"></i>
+                                     <span >Ambient</span> 
+                                 </a> 
+                            </li>
+
+                            <li>
+                                <a href="#feedback">
+                                    <i class="fa fa-pie-chart"></i>
+                                    <span >Comfort</span> 
+                                </a> 
+                            </l>
+                            <li>
+                                <a href="#structure">
+                                    <i class="fa fa fa-sitemap"></i>
+                                    <span id="#office_navbar" ></span> 
+                                </a> 
+                            </l>
+
+                           <!--  <li>
+                                <a href="#support"><i class="fa fa-map-marker"></i>
+                                <span style="padding-left: 5px;"> Where</span> 
+                                </a> 
+                            </li> -->
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-->
+        </nav>
+
+    </header>
+
+
+
+ <section id="main">
+            <div class="container-fluid">
+                
+                <div id= "head" class="section-heading scrollpoint sp-effect3">
+                    <!--style="color: #bdbdbd"-->
+                    <h1 id="building_title"></h1>
+                    <div class="divider"></div>
+                   
+                </div>
+                
+                <!--SE SONO 4 col-md-3 col-xs-6 , SE SONO 3 col-xs-3-->
+                <div id ="first_row" class="row row-centered">
+                   
+                  
+                    <div  class="col-lg-4 col-md-4" >
+                        <div class="main-item scrollpoint sp-effect1">
+                            <a href="#ambient">
+                            <i class="fa fa-line-chart fa-2x hvr-bounce-in"></i>
+                            </a>
+                            <h3>Ambient</h3>
+
+                            
+                        </div>
+                    </div>
+                    <div  class="col-lg-4 col-md-4 " >
+                        <div class="main-item scrollpoint sp-effect5" >
+                             <a href="#feedback">
+                            <i class="fa fa-pie-chart fa-2x hvr-bounce-in"></i>
+                            </a>
+                            <h3>Comfort</h3>
+                           
+                        </div>
+                    </div>
+
+                    <div  class="col-lg-4 col-md-4 " >
+                        <div class="main-item scrollpoint sp-effect3" >
+                             <a href="#structure">
+                            <i class="fa fa fa-sitemap fa-2x hvr-bounce-in"></i>
+                            </a>
+                            <h3 id="#office_main_item"></h3>
+                           
+                        </div>
+                    </div>
+
+                    </div>
+                       
+
+
+                   
+            </div>
+        </section>
+
+
+
+    <div class="wrapper">
+
+
+
+ <script src="js/totem_scripts/building.js"></script>
+<!-- AMBIENT CHARTS SECTION -->
+    <section id="ambient">
+            <div class="container-fluid">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Ambient Charts</h1>
+                    <div class="divider"></div>
+                    
+   <script src="js/totem_scripts/building.js"></script>
+    
+<!--PERIOD FILTERS -->
+    <div class="filter" id="filters">
+
+             <a  id="today_chart_button"  class="button js-filter-all active sp-effect1" >
+               <div class="stacked-icons">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-calendar-o fa-stack-2x fa-fw"></i>
+                <strong class="fa-stack-1x calendar-text" id="t_today"></strong>
+
+              </span>
+                  <span>Today</span>
+            </div>
+            </a>
+
+
+
+             <a  id="week_chart_button"  class="button js-filter-all  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x fa-fw"></i>
+                    <strong class="fa-stack-1x">7</strong>
+
+                  </span>
+                      <span>This week</span>
+                </div>
+            </a>
+
+            <a  id="month_chart_button" class="button js-filter-all  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">31</strong>
+
+                  </span>
+                      <span>This month</span>
+                </div>
+            </a>
+
+        <a  id="year_chart_button" class="button js-filter-all  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">Y</strong>
+
+                  </span>
+                      <span>This year</span>
+                </div>
+            </a>
+             </div>
+
+
+<!-- CHARTS CONTAINERS-->                
+<div class = "chart" id="chart" style="height: 400px; margin: 0 auto"></div>
+<div class = "chart" id="confrontation_chart" style="height: 400px; margin:0 auto; display: none;"></div>
+       
+
+<!--VARIABLE SELECTORS -->
+
+        <div class="filter ">
+                <a id ="temp_filter"  class="button js-filter-all clicked">
+                <i class="fa fa-fire" style="margin-right:5px;"></i>
+                  Temperature
+                  
+                </a>
+
+                <a id="humid_filter"  class="button js-filter-all ">
+                  <i class="fa fa-tint" style="margin-right:0px;"></i>
+                 Humidity/Rainfall
+                  
+
+                </a>
+                
+                </div>
+
+                    </div>
+            </div>
+          
+    </section>
+
+
+
+<!-- FEEDBACK CHARTS SECTION -->
+    <section id="feedback">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Comfort Charts</h1>
+                    <div class="divider"></div>
+                    <h3 class="sub-header" >Building comfort chart from user's feedbacks 
+                      <!-- <i class="fa fa-info-circle" style="padding-left:100;"></i> -->
+                      <a class="btn " style=" color:#337ab7;" data-toggle="modal" data-target="#myModal">
+                  <i class="fa fa-info-circle fa-2x"></i> </a>
+                    </h3>
+                     
+                     <!--GRID 1x3 -->
+
+                <div class="row" id="feedback_row">
+                    <div class="col-xs-6 col-md-4 scrollpoint sp-effect1">
+                         <div id="temp_feedback" ></div>
+                    </div>
+                   
+                    <div class="col-xs-6 col-md-4 scrollpoint sp-effect3">
+                         <div id="humid_feedback"></div>
+                         
+                    </div>
+                    
+                    <div class="col-xs-6 col-md-4 scrollpoint sp-effect2">
+                         <div id="air_feedback"></div>
+                    </div>
+
+                    
+
+                    </div> <!--end Grid -->
+
+
+<!-- FEEDBACK ANALYTICS CHART AND FILTERS -->
+        <div class="row" id="feedback_anal_row"  style="display:none;">
+              <div class="col-xs-6 scrollpoint sp-effect1">
+                <div  id="anal_feedback_bar"></div>
+              </div>
+
+
+
+
+              <div class="col-xs-6 scrollpoint sp-effect1" style="margin-top:45px;">
+                <div  id="anal_feedback_pie"></div>
+              </div>
+
+        </div>
+
+           <div class="filter" id="feedback_anal_filter">
+
+             <a id="feedback_anal_button" class="btn  btn-feedback  sp-effect1" 
+             style="margin-bottom:40px;">
+               
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-bar-chart fa-stack-2x fa-fw"></i>
+              </span>
+                  <span style="margin-left:10px;">Analytics</span>
+            </a>
+          </div>
+
+          <div class="filter" id="feedback_anal_filter">
+             <a id="feedback_chart_button" class="btn  btn-feedback sp-effect1"  style="display:none;margin-bottom:20px;">
+               
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-pie-chart fa-stack-2x fa-fw"></i>
+              </span>
+                  <span>Charts</span>
+            </a>
+          </div>
+                        
+
+
+
+  </div>
+    </div>
+     </section>
+
+
+
+
+<section id="structure" class="anima">
+  <div class="container-fluid">
+<div class="section-heading scrollpoint sp-effect3">
+                    <h1 id="#office_section_header"></h1>
+                    <div class="divider"></div>
+                    <h3 class="sub-header" >Building Smart Spaces
+                      <!-- <i class="fa fa-info-circle" style="padding-left:100;"></i> -->
+
+                    </h3>
+
+
+
+                   
+
+ <!-- <div class="infograph">
+                            <sup style="height: 172px;" class="styler_bg_color"></sup>
+
+                            
+                            <div class="row">
+                             
+
+                                <div class="col-xs-6 col-md-4 col-sm-3 scrollpoint sp-effect1">
+
+                                
+
+      
+                                   <span class="fa-stack fa-5x" style="color: #337ab7;">
+                                    <i class="fa fa-circle-thin fa-stack-2x fa-2x"></i>
+                                    <strong class="fa-stack-4x" id="spaces_count" ></strong>
+
+                                  </span>
+
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+                                      
+                                        <div class="details_name" style=" color:#337ab7;">Smart Spaces </div>
+                                        <div class="details_text"style=" color:#337ab7;">Number of users feedback with respect to the conditions of the 
+                                          ambient he/she inhabits. Thanks to users comfort feedback we can improve
+                                          the wellness of work spaces such as classrooms, offices, libraries and study rooms</div>
+                                          <a class="btn btn-default"> 
+                                            <i class="fa fa-th fa-2x pull-left"></i>
+                                            <span> Explore </span>
+                                          </a>
+
+                                    </div>
+                                </div>
+
+                               
+                                <div class="col-xs-6 col-md-4 col-sm-3 scrollpoint sp-effect1">
+                                    
+
+                                    <span class="fa-stack fa-5x" style="color: #337ab7;">
+                                    <i class="fa fa-circle-thin fa-stack-2x fa-2x"></i>
+                                    <strong class="fa-stack-4x" id="sensor_count" ></strong>
+                                  </span>
+
+                                    
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+
+                                        <div class="details_name" style=" color:#337ab7;">Sensors installed</div>
+                                     
+                                        <div class="details_text" style=" color:#337ab7;">Thanks to sensors  we are able to measure temperature,
+                                          humidity level,luminance and energy consumption for the specific smart
+                                          space inside the campus. </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-xs-6 col-md-4 col-sm-3 scrollpoint sp-effect1">
+
+                                
+
+      
+                                   <span class="fa-stack fa-5x" style="color: #337ab7;">
+                                    <i class="fa fa-circle-thin fa-stack-2x fa-2x"></i>
+                                    <strong class="fa-stack-5x" id="user_count" ></strong>
+
+                                  </span>
+
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+ 
+                                        <div class="details_name">Users </div>
+ 
+                                        <div class="details_text">Number of users involved</div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div> -->
+ <div class="row " id="menu_rooms"style="margin-top:0px;display:flex;" >    
+
+ </div>
+
+
+
+
+</div>
+
+</section>
+
+
+
+        <footer>
+            <div class="container-fluid">
+                <a class="scrollpoint sp-effect3">
+                    <img id="footer_img" alt="" class="logo">
+                </a>
+                <!-- <div class="social">
+                    <a href="https://twitter.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+              
+                    <a href="https://it-it.facebook.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div> -->
+                <div class="rights">
+                    <p>Copyright &copy; 2015</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    </div>
+
+    <!-- MAP DEFINITION -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script> 
+    <script src="js/slick.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+    
+    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+   
+     <script src="http://code.highcharts.com/stock/highstock.js"></script>
+      
+  <script src="js/scripts.js"></script>
+  <script src="js/totem_scripts/building.js"></script>
+  <script src="js/totem_scripts/meteo.js"></script>
+  <script src="js/totem_scripts/charts.js"></script>
+  
+    <script>
+        $(document).ready(function() {
+
+            //check if it's the first time the page is opened (building.js)
+            
+            checkFirstTime(location.hash.substring(1).split("#"));
+
+            //create_Loader();
+
+
+           // getBuildingRoomsData();
+           // map_init();
+$.when( 
+        get_data_building(),
+        get_data_rooms_building(),
+        get_feedback_building('temperature'),
+        //get_weather_day('airtemperature',1),
+        //get_weather_week('airtemperature'),
+        get_feedback_building('humidity'),
+        //get_weather_day('relativehumidity',1),
+
+        get_feedback_building('air')
+        //get_weather_day('rainrate',1)
+
+
+).then(function(buildingData,roomsData,feedbackTemp,//tempArgsDay,/*tempArgsWeek*/
+                feedbackHumid,//humidArgsDay,/*humidArgsMonth,*/
+                feedbackAir//,rainArgsDay/*,rainArgsMonth*/
+){ 
+
+        var parameters = location.search.substring(1).split("&");
+              var temp = parameters[0].split("=");
+
+              demonstrator_name = unescape(temp[1]);
+
+            
+        document.getElementById("brand_title").innerHTML = modifyString(buildingData[0].label);
+        document.getElementById("demonstrator_title").innerHTML = modifyString(demonstrator_name);
+        document.getElementById("building_title").innerHTML = modifyString(buildingData[0].label);
+
+
+          document.getElementById("#office_navbar").innerHTML = "Rooms";
+          document.getElementById("#office_main_item").innerHTML = "Rooms";
+          document.getElementById("#office_section_header").innerHTML = "Rooms";
+          
+
+        /*----------------EVENT LISTENERS -------------*/
+        
+        /*-----------------Back button ----------*/
+
+        /*-----------------Ambient --------------*/
+        document.getElementById("today_chart_button").onclick = show_today;
+
+        document.getElementById("week_chart_button").onclick = show_week;
+   
+        document.getElementById("month_chart_button").onclick = show_month;
+
+        document.getElementById("year_chart_button").onclick = show_year;
+          
+        document.getElementById("temp_filter").onclick = show_temp;
+        
+        document.getElementById("humid_filter").onclick = show_humid;
+
+        /*-----------------Feedback --------------*/
+        document.getElementById("feedback_anal_button").onclick = show_feedback_anal;
+
+        document.getElementById("feedback_chart_button").onclick=show_feedback_anal;
+
+        /*------------back buttons ----------*/
+        document.getElementById("back-button").onclick=go_back;
+
+        document.getElementById("back-button-navbar").onclick=go_back;
+        
+        if(modifyString(demonstrator_name)=="Polimi"){
+              document.getElementById("footer_img").src="img/1.png";
+            }else{
+              document.getElementById("footer_img").src="img/2.png";
+              //document.getElementById("footer_img").style.marginLeft = "-33%";
+            }
+
+
+
+        build_rooms_menu(roomsData[0],modifyString(buildingData[0].label));
+        
+        //--------------ENERGY CHARTS --------------------
+        energy_chart_confrontation();
+
+
+        //--------------AMBIENT CHARTS --------------------
+        //initialize the ambient charts with empty series
+        temperature_chart();
+        humidity_rain_chart();
+        
+        draw_building_chart(1,1); //draw daily temperature chart
+        
+        //set period to daily and variable to temperature 
+        period = 1;
+        variable = 1;
+
+
+        //--------------FEEDBACK CHARTS --------------------
+        humid_feedback_chart(organize_FeedbackData(feedbackHumid[0]));
+
+        temp_feedback_chart(organize_FeedbackData(feedbackTemp[0]));
+        air_feedback_chart(organize_FeedbackData(feedbackAir[0]));
+
+
+
+
+         feedback_analitic_chart_bar(parseInt(feedbackTemp[0][5]),parseInt(feedbackHumid[0][3]),parseInt(feedbackAir[0][2]));
+        feedback_analitic_chart_pie(parseInt(feedbackTemp[0][5]),parseInt(feedbackHumid[0][3]),parseInt(feedbackAir[0][2]));
+        
+        
+      });
+
+    
+        var date = new Date();
+        document.getElementById('t_today').innerHTML = date.getDate();
+        //document.getElementById('h_today').innerHTML = date.getDate();
+      
+
+   }); 
+
+//WINDOW HAS JUST FINISH LOADING
+    $(window).load(function(){
+         $('.pre-loader').fadeOut('slow');
+    });
+       
+
+         </script> 
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" style="font-size:19pt;">About</h4>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:15pt;">Would you like to express your comfort ? Download the official SCUOLA mobile application 
+          and start to send feedbacks about the conditions of the ambients you live!</p>
+          
+
+          <a  class="btn btn-default disabled" style="margin-left:125px; margin-top:25px; background: #ffffff; color: #337ab7;">
+              <i class="fa fa-android fa-3x pull-left"></i>
+            <!-- <span>Available on</span><br> -->
+            <span>Coming soon to</span><br>
+                <b>Google Play</b>
+        </a>
+
+
+      <a class="btn btn-default disabled " style="margin-left:10px; margin-top:25px; background: #ffffff; color: #337ab7;">
+             <i class="fa fa-apple fa-3x pull-left"></i>
+            <!-- <span>Available on</span><br> -->
+            <span>Coming soon to</span><br>
+          <b>App Store</b>
+          </a>
+      </div>
+
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div> -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+
+</html>
+ 

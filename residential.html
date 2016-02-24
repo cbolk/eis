@@ -1,0 +1,593 @@
+<!doctype html>
+<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Totem infopoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" sizes="192x192" href="Resources/Icon_xxxhdpi.png">
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-timepicker.css">
+
+     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    
+    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+    
+    <link rel="stylesheet" href="css/totem_css/building.css">
+    <link rel="stylesheet" href="css/totem_css/main.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+
+<!-- LOADER -->
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="img/scuola.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+
+
+
+
+</script>
+<header>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container" style="width:100%">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                  
+<!--BACK BUTTON: ITS BEHAVIOR IS DEMANDED TO SCRIPTS.JS SCROLLMENU() -->
+              <a id="back-button"  class="btn-rounded-colored  btn btn-lg toggle pull-left hvr-push " 
+              ><!-- style="margin-top:-47%;margin-left:90%;"> -->
+                  <i class="fa fa-home btn-rounded-icon"></i>
+                   <i class="fa fa-reply btn-rounded-icon"></i></a>
+
+              
+                
+
+              
+                    
+                         
+
+                         <a id="back-button-navbar" class="navbar-brand hvr-underline-from-center"  onclick="javascript:go_back();" >
+                          
+                          
+                          <i class="fa fa-home" style="color: #ffffff;" ></i>
+                          <i class="fa fa-angle-double-left" style="color: #ffffff;" ></i>
+                          <span id="demonstrator_title" style="padding-left: 5px; padding-right:20px; color: #ffffff;">Home</span>
+                            
+                        </a> 
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <ul id="navigation-bar" class="nav navbar-nav navbar-right" style="margin-right:5px;"> 
+                            <!--<li><a href="#features">features</a>
+                            </li> -->
+                            <li>
+                                <a href="#energy_confrontation_section">
+                                    <i class="fa fa fa-sun-o"></i>
+                                    <span style="padding-left: 5px;">Energy Production</span> 
+                                </a> 
+                            </li>
+                            <li id ="energy_nabvar">
+                                <a href="#energy_section">
+                                    <i class="fa fa-area-chart" ></i>
+                                    <span style="padding-left: 5px; padding-bottom: 5px;">Appliance Overview</span> 
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="#details">
+                                    <i class="fa fa fa-tachometer"></i>
+                                    <span style="padding-left: 5px;">Details</span> 
+                                </a> 
+                            </li>
+
+                            
+
+                           <!--  <li>
+                                <a href="#support"><i class="fa fa-map-marker"></i>
+                                <span style="padding-left: 5px;"> Where</span> 
+                                </a> 
+                            </li> -->
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid-->
+        </nav>
+
+    </header>
+
+
+ <section id="main">
+            <div class="container">
+                
+                <div id= "head" class="section-heading scrollpoint sp-effect3">
+                    <!--style="color: #bdbdbd"-->
+                    <h1 id="room_title">Residential demonstrator</h1>
+                    <div class="divider"></div>
+                   
+                </div>
+                
+                <!--SE SONO 4 col-md-3 col-xs-6 , SE SONO 3 col-xs-3-->
+                <div id ="room_menu" class="row row-centered scrollpoint sp-effect2">
+             
+                <div class="col-md-4  col-sm-6">
+                  <div class="main-item ">
+               <a href="#energy_confrontation_section"><i class="fa fa-sun-o fa-2x hvr-bounce-in"></i></a><h3>Energy Production</h3>
+               </div>
+
+             </div>
+
+                <div class="col-md-4  col-sm-6">
+                  <div class="main-item ">
+               <a href="#energy_section"><i class="fa fa-area-chart fa-2x hvr-bounce-in"></i></a><h3>Appliance Overview</h3>
+               </div>
+             </div>
+
+             <div class="col-md-4 col-sm-6">
+                  <div class="main-item ">
+               <a href="#details"><i class="fa fa-tachometer  fa-2x hvr-bounce-in"></i></a><h3>Details</h3>
+               </div>
+             </div>
+                   
+                </div>
+                      
+     
+            </div>
+
+
+        </section>
+
+ <section id="energy_confrontation_section">
+            
+            <div class="container">
+
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Energy Production-Consumption</h1>
+                    <div class="divider"></div>
+            <div class="filter", id="energy_filter">
+
+             <a  id="today_energy_confrontation" class="button js-filter-energy-confrontation active sp-effect1" >
+               <div class="stacked-icons">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-calendar-o fa-stack-2x fa-fw"></i>
+                <strong class="fa-stack-1x calendar-text" id="e_today_conf"></strong>
+
+              </span>
+                  <span>Today</span>
+            </div>
+            </a>
+
+
+
+             <a  id="week_energy_confrontation" class="button js-filter-energy-confrontation  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x fa-fw"></i>
+                    <strong class="fa-stack-1x">7</strong>
+
+                  </span>
+                      <span>Last 7 days</span>
+                </div>
+            </a>
+
+            <a  id="month_energy_confrontation" class="button js-filter-energy-confrontation sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">31</strong>
+
+                  </span>
+                      <span>This month</span>
+                </div>
+            </a>
+
+
+            <a  id="year_energy_confrontation" class="button js-filter-energy-confrontation  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">Y</strong>
+
+                  </span>
+                      <span>This year</span>
+                </div>
+            </a>
+             </div>
+                 <div id="energy_chart_confrontation" style="min-width: 300px; height: 400px; margin: 0 auto;"></div>
+                    </div>
+
+
+
+               </div>
+    </section>   
+
+    <div class="wrapper">
+
+
+<!-- ENERGY CHARTS SECTION -->
+    <section id="energy_section">
+            
+            <div class="container">
+
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Appliances Power Consumption Charts</h1>
+                    <div class="divider"></div>
+            <div class="filter", id="energy_filter">
+
+             <a  id="today_energy" class="button js-filter-energy active sp-effect1" >
+               <div class="stacked-icons">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-calendar-o fa-stack-2x fa-fw"></i>
+                <strong class="fa-stack-1x calendar-text" id="e_today"></strong>
+
+              </span>
+                  <span>Today</span>
+            </div>
+            </a>
+
+
+
+             <a  id="week_energy" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x fa-fw"></i>
+                    <strong class="fa-stack-1x">7</strong>
+
+                  </span>
+                      <span>Last 7 days</span>
+                </div>
+            </a>
+
+            <a  id="month_energy" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">31</strong>
+
+                  </span>
+                      <span>This month</span>
+                </div>
+            </a>
+
+
+            <a  id="year_energy" class="button js-filter-energy  sp-effect1" >
+                <div class="stacked-icons">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <strong class="fa-stack-1x">Y</strong>
+
+                  </span>
+                      <span>This year</span>
+                </div>
+            </a>
+             </div>
+             <div id="energy_chart_container">
+                 <!-- <div id="energy_chart" style="min-width: 300px; height: 400px; margin: 0 auto;"></div> -->
+                    </div>
+                  </div>
+
+
+
+               </div>
+
+
+    </section>   
+
+
+
+
+
+
+<section id="details" >
+  <div class="anima"></div>
+  <div class="container">
+<div class="section-heading scrollpoint sp-effect3">
+                    <h1>Details</h1>
+                    <div class="divider"></div>
+                    <p style=" color:#337ab7;">
+                      <!-- <i class="fa fa-info-circle" style="padding-left:100;"></i> -->
+
+                    </p>
+                    
+<div class="infograph">
+                            <sup style="height: 172px;" class="styler_bg_color"></sup>
+
+                            
+                            <div class="row">
+                                  <div class="col-md-4 col-xs-12 scrollpoint sp-effect1">
+
+
+                                    <div class="stacked-icons">
+                                 <i class="fa fa fa-plug fa-4x counter-icon" ></i>
+                                
+                                 <strong id="sensor_count" class="counter">
+                                 </strong>
+
+                                  </div>
+
+                                    
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+
+                                        <div class="details_name" >Smart Plugs
+                                        </div>
+                                     
+                                        <div class="details_text">Thanks to Smart Plug sensors we are able to measure the energy consumption of different appliances in the domestic demonstrator.  </div>
+                                    </div>
+                                </div>
+                      
+                      <div class="col-md-4 col-xs-12 scrollpoint sp-effect1">
+                         <div class="stacked-icons">
+                             <i class="fa fa fa-car fa-4x counter-icon" ></i>
+                             <i class="fa fa fa-battery-quarter fa-3x counter-icon" ></i>
+                         </div>
+                         <div class="desc styler_bg_color">
+                             <i class="styler_border_color"></i>
+                             <div class="details_name" >Recharge Station for Electric Vehicles</div>
+                             <div class="details_text">The demonstrator is equipped with a recharging station for electric vehicles.</div>
+                         </div>
+<!-- cb: details on recharges -->
+              <div class="row  ">
+                             <!-- ICON WITH COUNTER AND TEXT ABOVE-->
+                             <!-- FIRST -->
+                            <div class="col-lg-3 col-md-3  ">
+                              <div class="stacked-icons">
+                                   <i class="fa fa-child fa-2x counter-icon_smaller"></i>
+                                   <strong id="user_count" class="counter_smaller"></strong>
+                              </div>
+                              <div class="desc styler_bg_color">
+                                   <i class="styler_border_color"></i>
+                                   <div class="details_name" ># users</div>
+                              </div>
+                            </div>
+
+                          <!-- SECOND ICON WITH COUNTER AND TEXT ABOVE -->
+                          <div class="col-lg-3 col-md-3 ">
+                            <div class="stacked-icons"> 
+                               <i class="fa fa-car fa-2x counter-icon_smaller"></i>
+  		                  			<strong id="cars_count" class="counter_smaller"></strong> 
+  				                  </div>
+                              <div class="desc styler_bg_color">
+                                   <i class="styler_border_color"></i>
+                                   <div class="details_name" ># cars</div>
+                              </div>
+                          </div>
+                                 
+                        <!--THIRD ICON WITH COUNTER AND TEXT ABOVE -->
+                      <div class="col-lg-3 col-md-3 ">
+                            <div class="stacked-icons"> 
+                               <i class="fa fa-clock-o fa-2x counter-icon_smaller"></i>
+                              <strong id="days_count" class="counter_smaller"></strong> 
+                            </div>
+                              <div class="desc styler_bg_color">
+                                   <i class="styler_border_color"></i>
+                                   <div class="details_name" ># days</div>
+                              </div>
+                      </div>                                  
+                        
+                        <!--FORTH ICON WITH COUNTER -->
+                        <div class="col-lg-3 col-md-3 ">
+                           <div class="stacked-icons"> 
+                               <i class="fa fa-lightbulb-o fa-2x counter-icon_smaller"></i>
+                              <strong id="energy_counter" class="counter_smaller"></strong> 
+                            </div>
+                              <div class="desc styler_bg_color">
+                                   <i class="styler_border_color"></i>
+                                   <div class="details_name" >kWh</div>
+                              </div>
+                        </div>
+
+                  </div>
+                  <div class="row">dal <span id="startingfrom"></span></div>
+<!-- CB: end details -->
+                         
+                      </div>
+
+                            <div class="col-md-4 col-xs-12 scrollpoint sp-effect1">
+
+                                    <div class="stacked-icons">
+                                 <i class="fa fa fa-sun-o fa-4x counter-icon" ></i>
+                                 <i class="fa fa fa-th-large fa-4x counter-icon" ></i>
+                                
+
+                                  </div>
+
+                                    
+                                    <div class="desc styler_bg_color">
+                                        <i class="styler_border_color"></i>
+
+                                        <div class="details_name" >Photovoltaic System
+                                        </div>
+                                     
+                                        <div class="details_text">The demonstrator has a photovoltaic system.</div>
+                                    </div>
+                                </div>
+                                 
+                       
+                        </div>
+
+
+ </div>
+
+
+
+
+</div>
+
+</section>  
+
+
+
+        <footer>
+            <div class="container">
+                <a  class="scrollpoint sp-effect3">
+                    <img id="footer_img" alt="" class="logo">
+                </a>
+                <!-- <div class="social">
+                    <a href="https://twitter.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    
+                    <a href="https://it-it.facebook.com/polimi" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                </div> -->
+                <div class="rights">
+                    <p>Copyright &copy; 2015</p>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    </div>
+
+    <!-- MAP DEFINITION -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/placeholdem.min.js"></script>
+    
+    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+   
+     <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    
+  <script src="js/scripts.js"></script>
+  <script src="js/totem_scripts/residential.js"></script>
+  <script src="js/totem_scripts/meteo.js"></script>
+  <script src="js/totem_scripts/residential_chart.js"></script>
+    <script>
+    
+        $(document).ready(function() {
+          document.getElementById("back-button").onclick=go_back_home;
+          document.getElementById("back-button-navbar").onclick=go_back_home;
+
+          
+		/* CB: get the real number */
+      animate_counters_room(5);
+
+    $.when(get_variable_day(389),get_variable_day(387)).then(function(production,consumption){
+                draw_daily_confrontation_chart(organize_Data(consumption[0]),organize_Data(production[0]));
+                });
+     
+    //lavatrice      
+     $.when(get_variable_day(385)).then(function(energyDay){
+      append_chart(385);
+      energy_chart(energyDay,385,"Washing Machine");
+    });
+      //ferro
+     $.when(get_variable_day(382)).then(function(energyDay){
+      append_chart(382);
+      energy_chart(energyDay,382,"Iron");
+    });
+     //lavastoviglie
+     $.when(get_variable_day(379)).then(function(energyDay){
+      append_chart(379);
+      energy_chart(energyDay,379,"Dishwaher");
+    });
+     //frigo
+     $.when(get_variable_day(376)).then(function(energyDay){
+      append_chart(376);
+      energy_chart(energyDay,376,"Refrigerator");
+    });
+
+     //forno
+     $.when(get_variable_day(373)).then(function(energyDay){
+      append_chart(373);
+      energy_chart(energyDay,373,"Oven");
+    });
+    
+    	/* recharge EV */
+ 	$.when(get_data_recharges()).then(function(info){
+ 		var nusers = info.numerotessere;
+		var ncars = info.numerogiorni;
+		var kwh = Math.round(info.energiaattiva / 1000);
+		var recharges = info.numeroricariche;
+		var fromdate = info.datainizio;
+		animate_counters_loads_sources(nusers,ncars,kwh,recharges);	
+		document.getElementById("startingfrom").innerHTML = fromdate.substring(8,10) + "-" + fromdate.substring(5,7) + "-" + fromdate.substring(0,4);
+   });
+        
+
+
+      
+      /*-----------------energy --------------*/
+        
+        document.getElementById("today_energy").onclick = show_day_energy;
+
+        document.getElementById("week_energy").onclick = show_week_energy;
+   
+        document.getElementById("month_energy").onclick = show_month_energy;
+
+        document.getElementById("year_energy").onclick = show_year_energy;
+
+        document.getElementById("today_energy_confrontation").onclick = show_day_energy_confrontation;
+
+        document.getElementById("week_energy_confrontation").onclick = show_week_energy_confrontation;
+   
+        document.getElementById("month_energy_confrontation").onclick = show_month_energy_confrontation;
+
+        document.getElementById("year_energy_confrontation").onclick = show_year_energy_confrontation;
+
+        var date = new Date();
+        document.getElementById('e_today').innerHTML = date.getDate();
+        document.getElementById('e_today_conf').innerHTML = date.getDate();
+
+
+	
+});
+
+//WINDOW HAS JUST FINISH LOADING
+     </script> 
+    <script>
+       
+$(window).load(function(){
+         $('.pre-loader').fadeOut("slow");
+    });
+     </script> 
+    
+
+
+</body>
+
+</html>
+ 
