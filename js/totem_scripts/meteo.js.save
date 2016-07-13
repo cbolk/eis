@@ -1,9 +1,10 @@
+/var/www/totem/js/totem_scripts/meteo.js.save
 
   //-------------------------------GET WEATHER INFO FROM CLOUD--------------------------
 
   var get_weather_week = function (type,caller_id_position){
     var date = new Date();
-    var parameters = location.search.substring(1).split("&");
+    var parameters = location.sea.substring(1).split("&");
     var temp = parameters[1].split("=");
     id = unescape(temp[1].split("-")[0]);
     var url = 'http://131.175.21.162:8080/weatherreports/60min/building/'+id+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+'/?var='+type+'&weekly=true';    

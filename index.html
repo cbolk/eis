@@ -46,44 +46,20 @@
 </head>
 
 <body>
-
-
-
-<!-- LOADER -->
-<!--    <div class="pre-loader">
-        <div class="load-con">
-            <img src="img/scuola.png" class="animated fadeInDown" alt="">
-            <div class="spinner">
-              <div class="bounce1"></div>
-              <div class="bounce2"></div>
-              <div class="bounce3"></div>
-            </div>
-        </div>
-    </div>
-
-
--->
-
-
- <section id="main">
-            <div class="container">
-                
-                <div id= "head" class="section-heading animated bounceInUp">
-                   
-                    <img src="img/scuola.png" style="max-width:100%">
-                    <div class="divider"></div>
+    <section id="main">
+        <div class="container">
+            <div id= "head" class="section-heading animated bounceInUp">
+                <img src="img/scuola.png" style="max-width:100%">
+                <div class="divider"></div>
                     <h3 style=" color:#337ab7;"> <b>S</b>mart <b>C</b>ampus as <b>U</b>rban <b>O</b>pen 
-                        <b>La</b>bs </h3>
-                   
+                    <b>La</b>bs </h3>
                 </div>
-
                 <div id ="first_row" class="row">
                     <div  id="polimi" class="col-md-4  col-xs-6">
                         <div  class="main-item animated bounceInLeft ">
                             <!-- <i class="fa fa-home fa-2x" id="polimi-icon" ></i> -->
                             <img  src="img/1.png"></img>
                             <h3 style="font-weight:bold;">POLIMI</h3>
-                            
                         </div>
                     </div>
                     <div id="unibs" class="col-md-4  col-xs-6" >
@@ -91,7 +67,6 @@
                             <!-- <i class="fa fa-home fa-2x " id="unibs-icon" ></i> -->
                             <img  src="img/2.png"></img>
                             <h3 style="font-weight:bold;">UNIBS</h3>
-                            
                         </div>
                     </div>
                     <div id="residential" class="col-md-4 col-xs-6" >
@@ -99,92 +74,63 @@
                             <!-- <i class="fa fa-home fa-2x " id="residential-icon" ></i> -->
                              <img  src="img/3.png"></img>
                             <h3 style="font-weight:bold;">Residential</h3>
-                           
                         </div>
                     </div>
-                  <!--  <div id="future" class="col-md-3 col-xs-6" >
-                        <div class="main-item animated bounceInRight">
-                            <i class="fa fa-question fa-2x " id="future-icon" ></i>
-                            
-                            <h3 style="font-weight:bold;">...</h3>
-                            
-                        </div> -->
-                    </div>  
-                    </div>
-                        
-                       
-                   
+                </div>  
             </div>
-        </section>
+        </div>
+    </section>
 
-
- 
-
-   
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> 
-    
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/placeholdem.min.js"></script>
-   <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
     <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
     <script src="js/waypoints.min.js"></script>
-     <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
 
-<script src="js/scripts.js"></script>
-<script src="js/totem_scripts/main.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/totem_scripts/main.js"></script>
 
     <script>
- $(document).ready(function() {
-            appMaster.preLoader();
-// poli  = document.getElementById("polimi-icon");
-//         unibs = document.getElementById("unibs-icon");
-//         residential = document.getElementById("residential-icon");
-//         future = document.getElementById("future-icon");
+    function navigate()
+    {
+        $("#polimi")[0].click();
+    }
+
+    $(document).ready(function() {
+        appMaster.preLoader();
+
+        $("#polimi").click(polimi_clicked);
+        $("#unibs").click(unibs_clicked);
+        $("#residential").click(residential_clicked);
+
+        //demo
+       setTimeout(navigate, 4000);        
+
+    });  
+    </script> 
     
-
-
-    // TweenMax.from([poli, unibs, residential,future], 0.2, {scale:40,opacity:0.3,ease:Bounce.easeOut});
-    $("#polimi").click(polimi_clicked);
-    $("#unibs").click(unibs_clicked);
-    $("#residential").click(residential_clicked);
-    
-    //$("#future").click(future_clicked);
-    
-
-        });  
-        
-
-         </script> 
-    
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-           <h4 class="modal-title" style="font-size:19pt;">
-            <i class="fa fa-exclamation-triangle"></i>
-            Server error</h4>
-      </div>
-      <div class="modal-body">
-        <p style="font-size:15pt;">We are sorry, our server is temporarily unable to serve your request. Please try again later <i class="fa fa-hand-spock-o"></i>
-        </p>
-          
-      </div>
-
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div> -->
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-
-
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" style="font-size:19pt;">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    Server error</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size:15pt;">We are sorry, our server is temporarily unable to serve your request.
+                    Please try again later <i class="fa fa-hand-spock-o"></i>
+                    </p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </body>
-
 </html>

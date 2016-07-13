@@ -50,7 +50,7 @@ function go_back(){
   function get_data_building()
     {
 
-     var link = 'http://131.175.56.243:8080/buildings/'+building.building_id;
+     var link = 'http://131.175.21.162:8080/buildings/'+building.building_id;
      return  $.ajax({
         type:'GET',
         url: link,
@@ -69,7 +69,7 @@ function get_data_rooms_building(){
 
               
 
-              var url = 'http://131.175.56.243:8080/rooms/building/'+building.building_id;    
+              var url = 'http://131.175.21.162:8080/rooms/building/'+building.building_id;    
                 return $.ajax({
                 type:'GET',
                 url: url,
@@ -86,11 +86,11 @@ function get_data_rooms_building(){
 function get_feedback_building(type){
   
 
-             //var url ='http://131.175.56.243:8080/comfortfeedbacks/app/building/1/2015/04/20?var='+type;
+             //var url ='http://131.175.21.162:8080/comfortfeedbacks/app/building/1/2015/04/20?var='+type;
              
              //MONTH
-             // var url = 'http://131.175.56.243:8080/comfortfeedbacks/app/building/'+id+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/?var='+type;    
-              var url = 'http://131.175.56.243:8080/comfortfeedbacks/app/building/'+building.building_id+'/'+date.getFullYear()+'/?var='+type;    
+             // var url = 'http://131.175.21.162:8080/comfortfeedbacks/app/building/'+id+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/?var='+type;    
+              var url = 'http://131.175.21.162:8080/comfortfeedbacks/app/building/'+building.building_id+'/'+date.getFullYear()+'/?var='+type;    
                 return $.ajax({
                 type:'GET',
                 url: url,
@@ -265,7 +265,7 @@ function open_roomInfo_page(caller_info){
       setToOne();
       window.open("http://eis.deib.polimi.it/totem/room.html?d="+building.demonstrator_id+"&cid="+building.building_id+"-"+caller_info.data.building_name+'&rid='+caller_info.data.id_room,"_self");
       
-      //window.open("http://131.175.56.243/totem/room.html?d="+demonstrator_id+"&cid="+building.building_id+"-"+caller_info.data.building_name+'&rid='+caller_info.data.id_room,"_self");
+      //window.open("http://131.175.21.162/totem/room.html?d="+demonstrator_id+"&cid="+building.building_id+"-"+caller_info.data.building_name+'&rid='+caller_info.data.id_room,"_self");
 }
 
 

@@ -147,21 +147,7 @@ section .section-heading .divider:after {
 /*-----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
 footer {
-  background: #337ab7;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #337ab7 0%, #339999 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #337ab7), color-stop(100%, #339999));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #337ab7 0%, #339999 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #337ab7 0%, #339999 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #337ab7 0%, #339999 100%);
-  /* IE10+ */
-  background: linear-gradient(-45deg, #337ab7 0%, #339999 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#337ab7, endColorstr=#339999, GradientType=1);
+  background: #718ea4;
   /* IE6-9 fallback on horizontal gradient */
     text-align: center;
     padding: 10px 0;

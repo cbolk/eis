@@ -47,7 +47,7 @@
 // //get data of buildings for a specific district
 // function get_building_data(id){
 
-// var link = 'http://131.175.56.243:8080/districts/'+id+'/buildings/';
+// var link = 'http://131.175.21.162:8080/districts/'+id+'/buildings/';
 // //return $.getJSON(link, null,null, 'json');  //get(url,data to send (eventually),callback,dataType);
 // //GET METHOD --> API CALL
 
@@ -183,20 +183,20 @@
 
 // function open_demonstrator_page(caller_info){
 // window.open("http://eis.deib.polimi.it/totem/demonstrator.html?cid="+caller_info.data.id_dimostratore,"_self");
-// // window.open("http://131.175.56.243/totem/demonstrator.html?cid="+caller_info.data.id_dimostratore,"_self");
+// // window.open("http://131.175.21.162/totem/demonstrator.html?cid="+caller_info.data.id_dimostratore,"_self");
 // }
 
 
 // function open_building_page(caller_info){
 //  window.open("http://eis.deib.polimi.it/totem/building.html?cid="+caller_info.data.id_edificio,"_self");
-//  //window.open("http://131.175.56.243/totem/building.html?cid="+caller_info.data.id_edificio,"_self");
+//  //window.open("http://131.175.21.162/totem/building.html?cid="+caller_info.data.id_edificio,"_self");
 
 // }
 
 
 // function open_load_sources_page(caller_info){
 // window.open("http://eis.deib.polimi.it/totem/loads_sources.html?cid="+caller_info.data.id_dimostratore,"_self");
-// // window.open("http://131.175.56.243/totem/loads_sources.html?cid="+caller_info.data.id_dimostratore,"_self");
+// // window.open("http://131.175.21.162/totem/loads_sources.html?cid="+caller_info.data.id_dimostratore,"_self");
 // }
 
 
@@ -210,7 +210,7 @@
 // function open_buildingRoom_Menu(building){
 
 //   //CAMBIAA
-// //window.open("http://131.175.56.243/totem/building/?cid="+building.data.id_edificio,"_self");
+// //window.open("http://131.175.21.162/totem/building/?cid="+building.data.id_edificio,"_self");
 
 
 // build_rooms(['Info','Take a look..'],building);
@@ -221,7 +221,7 @@
 
 
 function polimi_clicked(){
-   var link = 'http://131.175.56.243:8080/districts';
+   var link = 'http://131.175.21.162:8080/districts';
   $.ajax({
     type:'GET',
     url: link,
@@ -231,7 +231,7 @@ function polimi_clicked(){
     //jsonp: "scuola",
     //jsonpCallback: "districtbuilding",
   success: function(data){
-          window.open("http://eis.deib.polimi.it/totem/demonstrator.html?cid=1","_self");
+          window.open("./demonstrator.html?cid=1","_self");
         },
    error: function(xhr,textStatus,err)
       {
@@ -240,7 +240,7 @@ function polimi_clicked(){
     });
  }
 function unibs_clicked(){
-   var link = 'http://131.175.56.243:8080/districts';
+   var link = 'http://131.175.21.162:8080/districts';
   $.ajax({
     type:'GET',
     url: link,
@@ -250,7 +250,7 @@ function unibs_clicked(){
     //jsonp: "scuola",
     //jsonpCallback: "districtbuilding",
   success: function(data){
-        window.open("http://eis.deib.polimi.it/totem/demonstrator.html?cid=2","_self");
+        window.open("./demonstrator.html?cid=2","_self");
         },
    error: function(xhr,textStatus,err)
       {
@@ -262,7 +262,7 @@ function unibs_clicked(){
     }
 
 function residential_clicked() {
-    var link = 'http://131.175.56.243:8080/districts';
+    var link = 'http://131.175.21.162:8080/districts';
   $.ajax({
     type:'GET',
     url: link,
@@ -272,7 +272,7 @@ function residential_clicked() {
     //jsonp: "scuola",
     //jsonpCallback: "districtbuilding",
   success: function(data){
-        window.open("http://eis.deib.polimi.it/totem/residential.html","_self");
+        window.open("./residential.html","_self");
         },
    error: function(xhr,textStatus,err)
       {

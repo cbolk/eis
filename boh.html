@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Ricarica EV</title>
+		
+		
+		<!-- 1. Add these JavaScript inclusions in the head of your page -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+		
+		
+		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script>
+		var chart; // global
+		var last;
+		/**
+		 * Request data from the server, add it to the graph and set a timeout to request again
+		 */
+		function requestData() {
+			$.ajax({
+				url: 'http://131.175.56.243:8080/rechargelogs/log/rechargestation/MI001-0073-0100/2016/03/02', 
+				success: function(points) {
+					var series = chart.series[0],
+						shift = series.data.length > 100; // shift if the series is longer than 20
+					var x, y;
+					x = Date.UTC(2016,2,2,0,0);
+					y = 0;
+					var evdata = Array();
+					evdata.push([x, y]);
+					for(i = points.length-1; i >= 0; i--){
+						x = points[i].timestamp;
+						y = points[i].power;
+						evdata.push([x, y]);
+					}		
+					chart.series[0].data = evdata;			
+					// call it again after one second
+					// setTimeout(requestData, 1000);	
+				},
+				cache: false
+			});
+		}
+			
+		$(document).ready(function() {
+			chart = new Highcharts.Chart({
+				chart: {
+					events: {
+						load: requestData
+					}
+				},
+				title: {
+					text: 'Ricarica EV'
+				},
+				xAxis: {
+					type: 'datetime',
+					min: Date.UTC(2016,2,2,0,0)
+				},
+				yAxis: {
+					minPadding: 0.2,
+					maxPadding: 0.2,
+					title: {
+						text: 'Power',
+						margin: 80
+					},
+					min: 0
+				},
+            	plotOptions: {
+                	area: {
+	                    fillColor: {
+	                        linearGradient: {
+	                            x1: 0,
+	                            y1: 0,
+	                            x2: 0,
+	                            y2: 1
+	                        },
+	                        stops: [
+	                            [0, Highcharts.getOptions().colors[0]],
+	                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+	                        ]
+	                    },
+	                    marker: {
+	                        radius: 2
+	                    },
+	                    lineWidth: 1,
+	                    states: {
+	                        hover: {
+	                            lineWidth: 1
+	                        }
+	                    },
+	                    threshold: null
+	                }
+	            },
+            	series: [{
+                	type: 'area',
+                	name: 'Power'
+            	}]
+			});		
+		});
+		</script>
+		
+	</head>
+	<body>
+		
+		<!-- 3. Add the container -->
+		<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+	
+	</body>
+</html>

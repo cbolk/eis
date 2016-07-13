@@ -42,16 +42,6 @@
 
 <body>
 <!-- LOADER -->
-  <div class="pre-loader">
-    <div class="load-con">
-      <img src="img/scuola.png" class="animated fadeInDown" alt="">
-      <div class="spinner">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-      </div>
-    </div>
-  </div>
   <header>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container" style="width:100%">
@@ -397,11 +387,11 @@
         }
 
         function step_weekly(){
-            $("#week_chart_button")[0].click();
+            $("#week_power")[0].click();
         }
 
         function next_page(){
-          location.href="./building2.html?d=Polimi&cid=1#structure";
+          location.href="./demonstrator2.html?cid=1#services";
         }
 
 
@@ -548,15 +538,10 @@
       });
 
     /*
-      setTimeout(step_ambient, 3000);
-      setTimeout(step_humidity, 7000);
-      setTimeout(step_comfort, 11000);
-      setTimeout(step_feedback, 14000);
-      setTimeout(step_feedback_chart, 18000);
-      setTimeout(step_power, 19000);
-      setTimeout(step_details, 23000);
-      setTimeout(next_page, 27000);
+      setTimeout(step_power, 3000);
       setTimeout(step_weekly, 7000);
+      setTimeout(next_page, 11000);
+      
       setTimeout(step_monthly, 15000);
       */
 
@@ -565,11 +550,7 @@
 
 //WINDOW HAS JUST FINISH LOADING
      </script> 
-<script>
-$(window).load(function(){
-   $('.pre-loader').fadeOut("slow");
-});
-</script> 
+
     
 
 

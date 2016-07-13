@@ -35,24 +35,6 @@
 </head>
 
 <body>
-
-
-  
-<!-- LOADER -->
-    <div class="pre-loader">
-        <div class="load-con">
-            <img src="img/scuola.png" class="animated fadeInDown" alt="">
-            <div class="spinner">
-              <div class="bounce1"></div>
-              <div class="bounce2"></div>
-              <div class="bounce3"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-
 <header>
 
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -429,40 +411,9 @@
   
     <script>
 
-        function step_ambient(){
-            $("#click_ambient")[0].click();
-        }
-
-        function step_weekly(){
-            $("#week_chart_button")[0].click();
-        }
-
-        function step_humidity(){
-            $("#humid_filter")[0].click();
-        }
-
-        function step_monthly(){
-            $("#month_chart_button")[0].click();
-        }
-
-        function step_comfort(){
-            $("#click_comfort_menu")[0].click();
-        }
-
-        function step_feedback(){
-            $("#feedback_anal_button")[0].click();
-        }
-
-        function step_feedback_chart(){
-            $("#feedback_chart_button")[0].click();
-        }
-
-        function step_rooms(){
-            $("#click_rooms_menu")[0].click();
-        }
 
         function next_page(){
-          location.href="./room.html?d=Polimi&cid=1-20&rid=1";
+          location.href="./room121.html?d=Polimi&cid=1-20&rid=4";
         }
 
         $(document).ready(function() {
@@ -585,25 +536,12 @@
               //document.getElementById('h_today').innerHTML = date.getDate();
       
 /*
-          setTimeout(step_ambient, 3000);
-          setTimeout(step_weekly, 7000);
-          setTimeout(step_humidity, 11000);
-          setTimeout(step_monthly, 15000);
-          setTimeout(step_comfort, 19000);
-          setTimeout(step_feedback, 23000);
-          setTimeout(step_feedback_chart, 27000);
-          setTimeout(step_rooms, 29000);
-          setTimeout(next_page, 33000);
+          setTimeout(next_page, 3000);
+
 */
    }); 
 
-//WINDOW HAS JUST FINISH LOADING
-    $(window).load(function(){
-         $('.pre-loader').fadeOut('slow');
-    });
-       
-
-         </script> 
+</script> 
 
 
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

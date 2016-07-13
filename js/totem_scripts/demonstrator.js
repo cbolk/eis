@@ -11,7 +11,7 @@ function get_data_demonstrator()
     {
 
       
-      var link = 'http://131.175.56.243:8080/districts/'+demonstrator.id;
+      var link = 'http://131.175.21.162:8080/districts/'+demonstrator.id;
 
       return $.ajax({
         type:'GET',
@@ -30,7 +30,7 @@ function get_data_demonstrator()
 
 
 function get_buildings(){
-  var link = 'http://131.175.56.243:8080/districts/'+demonstrator.id+'/buildings';
+  var link = 'http://131.175.21.162:8080/districts/'+demonstrator.id+'/buildings';
   return $.ajax({
         type:'GET',
         url: link,
@@ -48,7 +48,7 @@ function get_buildings(){
 }
 
 function get_all_feedback_demonstrator(type){
-              var url = 'http://131.175.56.243:8080/comfortfeedbacks';    
+              var url = 'http://131.175.21.162:8080/comfortfeedbacks';    
                 return $.ajax({
                 type:'GET',
                 url: url,
@@ -65,53 +65,7 @@ function get_all_feedback_demonstrator(type){
 
 
 
-// function count_feedback(data){
-// count =0;
-// var parameters = location.search.substring(1).split("&");
-// var temp = parameters[0].split("=");
-// id = unescape(temp[1]);
-// for (i =0; i<data.length; i++) {
-//   if(data[i].fkroom.roomid == id){
-//     count++;
-//     continue;
-//   }
 
-// }
-
-// return count;
-// }
-
-
-
-
-    
-// function animate_counters_demonstrator(n_smart_building,n_feedbacks){
-// $('.anima').waypoint(function(){
-//             $.getScript("js/countUp.js", function(){
-
-
-
-//    var options = {
-//   useEasing : true,
-//   useGrouping : true,
-//   separator : ',',
-//   decimal : '.',
-//   prefix : '',
-//   suffix : ''
-// };
-
-// var feedback = new countUp("smart_count", 0, n_smart_building, 0, 2.5, options);
-// var rooms = new countUp("room_count", 0, n_feedbacks, 0, 2.5, options);
-// // var user = new countUp("user_count", 0, 60, 0, 1, options);
-// feedback.start();
-// rooms.start();
-// // user.start();
-
-//    // Use anything defined in the loaded script...
-// });
-//         });
-
-// }
 // ------------------------Build SMART BUILDING SECTION --------------------
 function create_building_section(data,demonstrator_name){
 
@@ -133,7 +87,7 @@ function create_building_section(data,demonstrator_name){
             id = data[i].identifier;
             //Dynamically Create the menu of buildings for the selected demonstrator
             elm= '<div class="'+column_class+'">'+'<div class="service-item" id="'+name+'">'+
-                                '<span class="fa-stack fa-4x hvr-grow ">'+
+                                '<span id="prova" class="fa-stack fa-4x hvr-grow ">'+
                                 '<i class="fa fa-circle fa-stack-2x"></i>'+
                                 '<i class="fa fa-building fa-stack-1x text-primary" style="padding-left: 4px;"></i>'+
                             '</span>'+
@@ -179,14 +133,14 @@ function create_building_section(data,demonstrator_name){
 
 function open_building_page(caller_info){
   setToOne();
- window.open("http://eis.deib.polimi.it/totem/building.html?d="+caller_info.data.nome_dimostratore+"&cid="+caller_info.data.id_edificio,"_self");
- //window.open("http://131.175.56.243/totem/building.html?d="+caller_info.data.nome_dimostratore+"&cid="+caller_info.data.id_edificio,"_self");
+ window.open("./building.html?d="+caller_info.data.nome_dimostratore+"&cid="+caller_info.data.id_edificio,"_self");
+ //window.open("http://131.175.21.162/totem/building.html?d="+caller_info.data.nome_dimostratore+"&cid="+caller_info.data.id_edificio,"_self");
 
 }
 function open_shelter(){
   setToOne();
- window.open("http://eis.deib.polimi.it/totem/shelter.html","_self");
- //window.open("http://131.175.56.243/totem/building.html?d="+caller_info.data.nome_dimostratore+"&cid="+caller_info.data.id_edificio,"_self");
+ window.open("./shelter.html","_self");
+ //window.open("http://131.175.21.162/totem/building.html?d="+caller_info.data.nome_dimostratore+"&cid="+caller_info.data.id_edificio,"_self");
 
 }
 
@@ -198,7 +152,7 @@ function create_load_sources_section(demonstrator_name){
         var parameters = location.search.substring(1).split("&");
             var temp = parameters[0].split("=");
             id = unescape(temp[1]);
-            window.open("http://eis.deib.polimi.it/totem/loads_sources.html?d="+demonstrator_name+"&did="+id ,"_self");
+            window.open("./loads_sources.html?d="+demonstrator_name+"&did="+id ,"_self");
     
 
 

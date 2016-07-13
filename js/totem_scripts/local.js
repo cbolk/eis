@@ -259,7 +259,7 @@ function get_variable_measures_promise(link, varid, lab, unit){
 
 /* utilities */
 
-/* returns varid after header (e.g. http://131.175.56.243:8080/measurements/15min/sensor/variable/) 
+/* returns varid after header (e.g. http://131.175.21.162:8080/measurements/15min/sensor/variable/) 
   and before next / */
 /* not used at present */
 function get_varid_from_link(link, header)

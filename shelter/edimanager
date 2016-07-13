@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "starting"
+exec mono "./EdiManager.exe" "$@"
+echo "done!"
+

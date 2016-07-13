@@ -12,7 +12,7 @@
       {
 
         
-        var link = 'http://131.175.56.243:8080/districts/'+load_sources.district_id;
+        var link = 'http://131.175.21.162:8080/districts/'+load_sources.district_id;
 
         return $.ajax({
           type:'GET',
@@ -34,7 +34,7 @@
  function get_data_recharges(did)
       {
         
-        var link = 'http://131.175.56.243:8080/recharges/district/'+did;
+        var link = 'http://131.175.21.162:8080/recharges/district/'+did;
 	      return $.ajax({
           type:'GET',
           url: link,
@@ -58,7 +58,7 @@
   date =new Date();
   function get_variable_day(type){
 
-    url = 'http://131.175.56.243:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+'?from=07:00&to=23:59';             
+    url = 'http://131.175.21.162:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+'?from=07:00&to=23:59';             
               return $.ajax({
                   type:'GET',
                   url: url,
@@ -75,8 +75,8 @@
 
   function get_variable_month(type){
 
-                var url = 'http://131.175.56.243:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1);    
-    //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+                var url = 'http://131.175.21.162:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1);    
+    //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
                return $.ajax({
                   type:'GET',
@@ -94,8 +94,8 @@
 
   function get_variable_week(type){
 
-                var url = 'http://131.175.56.243:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+"?weekly=true";    
-    //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+                var url = 'http://131.175.21.162:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+"?weekly=true";    
+    //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
                return $.ajax({
                   type:'GET',
@@ -113,8 +113,8 @@
 
   function get_variable_year(type){
 
-                var url = 'http://131.175.56.243:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear();    
-    //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+                var url = 'http://131.175.21.162:8080/measurements/60min/room/1/variableclass/'+type+'/'+date.getFullYear();    
+    //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
                return $.ajax({
                   type:'GET',

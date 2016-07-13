@@ -219,20 +219,8 @@
             });
         });
 
-        function step1(){
-            $("#click_about")[0].click();
-        }
-
-        function step2(){
-            $("#show_smart_building")[0].click();
-        }
-
-        function focus3(){
-            $("#prova")[0].focus();
-        }
-
-        function step3(){
-            location.href="./building.html?d=Polimi&cid=1";
+        function next_page(){
+            location.href="./loads_sources.html?d=Polimi&did=1";
         }
 
     </script>
@@ -286,12 +274,8 @@
                 create_load_sources_section(modifyString(dataArgs[0].label));
        
             });
-
             /*
-            setTimeout(step1, 3000);
-            setTimeout(step2, 11000);
-            setTimeout(focus3, 14000);            
-            setTimeout(step3, 15000);
+            setTimeout(next_page, 3000);
             */
        }); 
 

@@ -13,7 +13,7 @@
   building_id = unescape( (location.search.substring(1).split("&")[1].split("="))[1].split("-")[0]);
 
   function go_back_building(){
-    window.open("http://eis.deib.polimi.it/totem/building.html?d="+demonstrator_name+"&cid="+building_id+"#1","_self");
+    window.open("./building.html?d="+demonstrator_name+"&cid="+building_id+"#1","_self");
   }
 
   function go_back_demonstrator(){
@@ -22,9 +22,9 @@
     var demonstrator_name = unescape(temp[1]);
 
     if(demonstrator_name.indexOf("Polimi") > -1){
-      window.open("http://eis.deib.polimi.it/totem/demonstrator.html?cid=1#1","_self");
+      window.open("./demonstrator.html?cid=1#1","_self");
     }else{
-      window.open("http://eis.deib.polimi.it/totem/demonstrator.html?cid=2#1","_self");
+      window.open("./demonstrator.html?cid=2#1","_self");
     }
   }
 
@@ -53,7 +53,7 @@
   /* retieves information about the room */
   /* {"roomid":1,"label":"ufficio 126","ipgateway":"131.175.120.25 ","roomcode":"0301001053"} */
   function get_data_room(){
-    var link = 'http://131.175.56.243:8080/rooms/'+room.id+'/details';
+    var link = 'http://131.175.21.162:8080/rooms/'+room.id+'/details';
     return $.ajax({
       type:'GET',
       url: link,
@@ -83,7 +83,7 @@
       {"identifier":7,"name":"sensori adb"},{"identifier":2,"name":"umiditÃ "},
       {"identifier":9,"name":"potenza attiva meter"},{"identifier":4,"name":"livello co2"}] */
   function get_variables_room(){
-    var link = 'http://131.175.56.243:8080/variables/room/'+room.id+'/list';
+    var link = 'http://131.175.21.162:8080/variables/room/'+room.id+'/list';
     return $.ajax({
       type:'GET',
       url: link,
@@ -97,7 +97,7 @@
 
 
   function get_sensors_room(){
-    var link = 'http://131.175.56.243:8080/sensors/room/all/'+room.id;
+    var link = 'http://131.175.21.162:8080/sensors/room/all/'+room.id;
     return $.ajax({
       type:'GET',
       url: link,
@@ -114,8 +114,8 @@
   //-------------ROOM FEEDBACK INFO
 
   function get_feedback_room(type){
-               //var url ='http://131.175.56.243:8080/comfortfeedbacks/app/building/1/2015/04/20?var='+type;
-                var url = 'http://131.175.56.243:8080/comfortfeedbacks/app/room/'+room.id+'/'+date.getFullYear()+'/?var='+type;    
+               //var url ='http://131.175.21.162:8080/comfortfeedbacks/app/building/1/2015/04/20?var='+type;
+                var url = 'http://131.175.21.162:8080/comfortfeedbacks/app/room/'+room.id+'/'+date.getFullYear()+'/?var='+type;    
                   return $.ajax({
                   type:'GET',
                   url: url,
@@ -135,17 +135,17 @@
     var url='';
     if(type==POWER_ID || type == CO2_ID){ /* power or co2 */
          /* no aggregation */
-         /* http://131.175.56.243:8080/measurements/noaggr/sensor/variable/24/2015/12/03 
-            url = 'http://131.175.56.243:8080/measurements/noaggr/sensor/variable/24/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();
+         /* http://131.175.21.162:8080/measurements/noaggr/sensor/variable/24/2015/12/03 
+            url = 'http://131.175.21.162:8080/measurements/noaggr/sensor/variable/24/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();
          */
          /* aggregated */
-         /* http://131.175.56.243:8080/measurements/noaggr/sensor/variable/24/2015/12/03 
-            url = 'http://131.175.56.243:8080/measurements/summed/room/1/variableclass/6/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();  */
-      url = 'http://131.175.56.243:8080/measurements/15min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();                 
+         /* http://131.175.21.162:8080/measurements/noaggr/sensor/variable/24/2015/12/03 
+            url = 'http://131.175.21.162:8080/measurements/summed/room/1/variableclass/6/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();  */
+      url = 'http://131.175.21.162:8080/measurements/15min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();                 
     } else {
-      url ='http://131.175.56.243:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate(); 
+      url ='http://131.175.21.162:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate(); 
     }
-     //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+     //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
     return $.ajax({
       type:'GET',
@@ -159,8 +159,8 @@
   }
 
   function get_variable_month(type){
-    var url = 'http://131.175.56.243:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1);    
-    //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+    var url = 'http://131.175.21.162:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1);    
+    //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
     return $.ajax({
       type:'GET',
@@ -175,8 +175,8 @@
 
   function get_variable_week(type){
 
-                var url = 'http://131.175.56.243:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+"?weekly=true";    
-    //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+                var url = 'http://131.175.21.162:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate()+"?weekly=true";    
+    //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
                return $.ajax({
                   type:'GET',
@@ -194,8 +194,8 @@
 
   function get_variable_year(type){
 
-                var url = 'http://131.175.56.243:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear();    
-    //var url = 'http://131.175.56.243:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
+                var url = 'http://131.175.21.162:8080/measurements/60min/room/'+room.id+'/variableclass/'+type+'/'+date.getFullYear();    
+    //var url = 'http://131.175.21.162:8080/measurements/15min/room/1/variableclass/1/2015/04/20';
                 //return $.getJSON(url);
                return $.ajax({
                   type:'GET',
@@ -293,27 +293,27 @@
   	   			  var energy = 
                '<div class="col-md-3">'+
                '<div class="main-item ">'+
-               '<a onclick="window.scroll(0,900);">'+
+               '<a id="click_power" onclick="window.scroll(0,900);">'+
                '<i class="fa fa-area-chart fa-2x hvr-bounce-in""></i></a><h3>Power</h3>'+
                '</div></div>';
               var ambient = 
                '<div class="col-md-3 ">'+
                '<div class="main-item ">'+
-               '<a  onclick="window.scroll(0,1848);">'+
+               '<a id="click_ambient" onclick="window.scroll(0,1848);">'+
                '<i class="fa fa-line-chart fa-2x hvr-bounce-in""></i></a><h3>Ambient</h3>'+
                '</div></div>';
 
                var comfort = 
                '<div class="col-md-3 ">'+
                '<div class="main-item ">'+
-              '<a  onclick="window.scroll(0,2804);">'+
+               '<a id="click_comfort" onclick="window.scroll(0,2804);">'+
                '<i class="fa fa-pie-chart fa-2x hvr-bounce-in""></i></a><h3>Comfort</h3>'+
                '</div></div>';
 
                var details = 
                '<div class="col-md-3 ">'+
                '<div class="main-item ">'+
-               '<a  onclick="window.scroll(0,3710);">'+
+               '<a id="click_details" onclick="window.scroll(0,3710);">'+
                '<i class="fa fa-tachometer fa-2x hvr-bounce-in""></i></a><h3>Details</h3>'+
                '</div></div>';
                
@@ -331,21 +331,21 @@
               var ambient = 
                '<div class="col-lg-4 col-md-4">'+
                '<div class="main-item">'+
-               '<a onclick="window.scroll(0,900);">'+
+               '<a id="click_ambient" onclick="window.scroll(0,900);">'+
                '<i class="fa fa-line-chart fa-2x""></i></a><h3>Ambient</h3>'+
                '</div></div>';
 
                var comfort = 
                '<div class="col-lg-4 col-md-4">'+
                '<div class="main-item ">'+
-               '<a  onclick="window.scroll(0,1848);">'+
+               '<a id="click_comfort" onclick="window.scroll(0,1848);">'+
                '<i class="fa fa-pie-chart fa-2x""></i></a><h3>Comfort</h3>'+
                '</div></div>';
 
                var details = 
                '<div class="col-lg-4 col-md-4">'+
                '<div class="main-item ">'+
-               '<a  onclick="window.scroll(0,2804);">'+
+               '<a id="click_details" onclick="window.scroll(0,2804);">'+
                '<i class="fa fa-tachometer fa-2x""></i></a><h3>Details</h3>'+
                '</div></div>';
                

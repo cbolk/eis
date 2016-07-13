@@ -36,16 +36,27 @@ var getColorPowerOffice = {
     'clima' : '#1aa130'
 };
 
+
+var getColorRechargeSession = {
+    0 : '#208A18',
+    1 : '#2a52be',
+    2 : '#df8b36',
+    3 : '#c31f1f'
+};
+
+
 var getIndexPowerOffice = {
     'forza' : 2,
     'luci' : 0,
     'clima' : 1
 };
 
-var LINK_HEADER_MEASUREMENTS_15 = "http://131.175.56.243:8080/measurements/15min/sensor/variable/";
-var LINK_HEADER_MEASUREMENTS_60 = "http://131.175.56.243:8080/measurements/60min/sensor/variable/";
-var LINK_HEADER_VARIABLES = "http://131.175.56.243:8080/variables/";
-var LINK_HEADER_VARIABLES_CLASS_ROOM = "http://131.175.56.243:8080/variables/room/";
+var LINK_CLOUD = "http://131.175.21.162:8080/";
+
+var LINK_HEADER_MEASUREMENTS_15 = "http://131.175.21.162:8080/measurements/15min/sensor/variable/";
+var LINK_HEADER_MEASUREMENTS_60 = "http://131.175.21.162:8080/measurements/60min/sensor/variable/";
+var LINK_HEADER_VARIABLES = "http://131.175.21.162:8080/variables/";
+var LINK_HEADER_VARIABLES_CLASS_ROOM = "http://131.175.21.162:8080/variables/room/";
 var LINK_VARIABLE_CLASS = "/variableclass/"
 
 var ACTIVE_POWER_LABEL = "potenza attiva meter";
@@ -56,6 +67,9 @@ var TEMPERATURE_LABEL = "temperatura";
 
 var CHART_POWER_MS_ID = "#powermeter_chart_ms";
 var CHART_VAR_MS_ID = "#variable_chart_ms";
+
+
+var MAX_RECHARGE_LIST = 10;
 
 /* generates the day / 7 days / month /year  menu for a given monitored data */
 /* variable: power temperature humidity ... */
@@ -105,4 +119,30 @@ function menu_section(variable, button, filter)
 //	html = html + '</section>';
 	return html;
 
+}
+
+
+
+function datetime2unixts(idate, itime)
+{
+	return Date.parse(idate + " " + itime).getTime()/1000;
+}
+
+function formatDate(idate)
+{
+	var dp = idate.split("-");
+	return dp[2] + "-" + dp[1] + "-" + dp[0];
+}
+
+function modifyString(string){
+  
+  if(string.toLowerCase().indexOf("edificio") >= 0){ //hard-translation in english
+               string = string.replace("edificio","building");
+   }else if(string.toLowerCase().indexOf("ufficio") >= 0){ //hard-translation in english
+               string = string.replace("ufficio","office");
+   }else if(string.toLowerCase().indexOf("aula") >= 0){ //hard-translation in english
+               string = string.replace("aule","classroom");
+   }
+   
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }

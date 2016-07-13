@@ -97,7 +97,7 @@
                               </li>
 
                               <li>
-                                  <a href="#station">
+                                  <a id="click_recharge_menu" href="#station">
                                       <i class="fa fa fa-plug"></i>
                                       <span style="padding-left: 5px;">Charging Stations</span> 
                                   </a> 
@@ -258,7 +258,7 @@
 
 
 
-  <section id="station"class="anima reset-bar" >
+  <section id="station" class="anima reset-bar" >
     <div class="container ">
   <div class="section-heading scrollpoint sp-effect3">
                       <h1>Charging Stations</h1>
@@ -348,7 +348,7 @@
                                       <div class="desc styler_bg_color">
                                           <i class="styler_border_color"></i>
    
-                                          <div class="details_name" > Energy consumed  (GWh)</div>
+                                          <div class="details_name" > Energy consumed  (kWh)</div>
    
                                           <!--  <div class="details_text">Amount of CO<sub>2</sub> savings</div>  -->
                                       </div>
@@ -357,6 +357,9 @@
                               </div>
 
                           </div>
+                      <div class="row ">
+                         dati collezionati a partire dal <span id="startingfrom"></span>
+                      </div>
 
 
    </div>
@@ -419,86 +422,98 @@
       </div>
 
       <!-- MAP DEFINITION -->
-     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
       <script src="js/slick.min.js"></script>
       <script src="js/placeholdem.min.js"></script>
-      
+
       <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
       <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
       <script src="js/waypoints.min.js"></script>
-     
-       <script src="http://code.highcharts.com/stock/highstock.js"></script>
-      
-    <script src="js/scripts.js"></script>
-    <script src="js/totem_scripts/load-sources.js"></script>
-    <script src="js/totem_scripts/meteo.js"></script>
-     <script src="js/totem_scripts/charts.js"></script>
-     <script src="js/totem_scripts/panel_chart.js"></script>
 
+      <script src="http://code.highcharts.com/stock/highstock.js"></script>
+
+      <script src="js/scripts.js"></script>
+      <script src="js/totem_scripts/load-sources.js"></script>
+      <script src="js/totem_scripts/meteo.js"></script>
+      <script src="js/totem_scripts/charts.js"></script>
+      <script src="js/totem_scripts/panel_chart.js"></script>
       <script>
-          $(document).ready(function() {
 
-            $.when(get_data_load_sources() ).then(function(dataArgs){ 
+      function step_recharge()
+      {
+          $("#click_recharge_menu")[0].click();
+      }
+
+      function next_page(){
+        location.href="./demonstrator.html?cid=1";
+      }
+
+      $(document).ready(function() {
+
+        $.when(get_data_load_sources() ).then(function(dataArgs){ 
+      
+          demonstrator_name = modifyString(dataArgs.label);
+          document.getElementById("brand_title").innerHTML = "Loads and sources";
+          document.getElementById("load_sources_title").innerHTML = "Loads and sources: "+demonstrator_name
+          document.getElementById("demonstrator_title").innerHTML = demonstrator_name;
+    
+          if(demonstrator_name=="Polimi"){
+              document.getElementById("footer_img").src="img/1.png";
+              create_sections(0);
+
+          }else{
+              document.getElementById("footer_img").src="img/2.png";
+              create_sections(1);
+          }
+
+          var img="url(img/loads_sources2.jpg) no-repeat center center scroll";
           
-      demonstrator_name = modifyString(dataArgs.label);
-      document.getElementById("brand_title").innerHTML = "Loads and sources";
-      document.getElementById("load_sources_title").innerHTML = "Loads and sources: "+demonstrator_name
-
-      document.getElementById("demonstrator_title").innerHTML = demonstrator_name;
-        
-      if(demonstrator_name=="Polimi"){
-                document.getElementById("footer_img").src="img/1.png";
-                create_sections(0);
-              }else{
-                document.getElementById("footer_img").src="img/2.png";
-                create_sections(1);
-              }
-
-              var img="url(img/loads_sources2.jpg) no-repeat center center scroll";
-              
-              // document.getElementById("top").style.backgroundImage=img;
-              $("#main").css({"background":img});
-              $("#main").css({"background-size":"cover"});
-
-           
+          // document.getElementById("top").style.backgroundImage=img;
+          $("#main").css({"background":img});
+          $("#main").css({"background-size":"cover"});
         });
 
+       //-----------------------ENERGY SECTION 
+       //energy_chart();
+       $.when(get_variable_day('1')).then(function(powerDay){
+          //panel_energy_chart(powerDay);
+          //draw_daily_panel_chart(powerDay);
+          draw_daily_panel_chart(calculate_energy(powerDay,1));
 
-           //-----------------------ENERGY SECTION 
-           //energy_chart();
-           $.when(get_variable_day('1')).then(function(powerDay){
-              //panel_energy_chart(powerDay);
-              //draw_daily_panel_chart(powerDay);
-              draw_daily_panel_chart(calculate_energy(powerDay,1));
+        }); //potenza attiva
+       
 
-            }); //potenza attiva
-           
+       /*--------------LISTENER ----------------*/
+      /*-----------------energy --------------*/
+      document.getElementById("today_energy").onclick = show_day_panel_energy;
 
-           /*--------------LISTENER ----------------*/
-        /*-----------------energy --------------*/
-        document.getElementById("today_energy").onclick = show_day_panel_energy;
+      document.getElementById("week_energy").onclick = show_week_panel_energy;
+ 
+      document.getElementById("month_energy").onclick = show_month_panel_energy;
 
-        document.getElementById("week_energy").onclick = show_week_panel_energy;
-   
-        document.getElementById("month_energy").onclick = show_month_panel_energy;
-
-        document.getElementById("year_energy").onclick = show_year_panel_energy;
+      document.getElementById("year_energy").onclick = show_year_panel_energy;
       var date = new Date();
-        document.getElementById('e_today').innerHTML = date.getDate();
-          // --------------------DETAILED SECTION ------------------------
-          
-          
-          animate_counters_loads_sources(5,150,200,20);
-          
-          
-    
-
+      document.getElementById('e_today').innerHTML = date.getDate();
+      // --------------------DETAILED SECTION ------------------------
       
+      
+      //animate_counters_loads_sources(5,150,200,20);
+          /* recharge EV */
+      $.when(get_data_recharges(load_sources.district_id)).then(function(info){
+        var nusers = info.numerotessere;
+        var ncars = info.numerogiorni;
+        var kwh = Math.round(info.energiaattiva / 1000000);
+        var recharges = info.numeroricariche;
+        var fromdate = info.datainizio;
+        animate_counters_loads_sources(nusers,ncars,kwh,recharges); 
+        document.getElementById("startingfrom").innerHTML = fromdate.substring(8,10) + "-" + fromdate.substring(5,7) + "-" + fromdate.substring(0,4);
+       });
 
-          
-
-
+/*
+      setTimeout(step_recharge, 3000);      
+      setTimeout(next_page, 10000);      
+*/
      }); 
 
   //WINDOW HAS JUST FINISH LOADING
@@ -506,11 +521,9 @@
            $('.pre-loader').fadeOut('slow');
       });
          
+    </script> 
 
-           </script> 
 
-
-  </body>
-
-  </html>
+</body>
+</html>
    

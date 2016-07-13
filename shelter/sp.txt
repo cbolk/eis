@@ -1,0 +1,5 @@
+==== shelter smart plugs ====
+sensorid: 37 38 39 40
+variableid power: 89 90 91 92
+variableid current: 67 68 69 70
+macaddress: 74DA3822C793 74DA3822C797 74DA3822D1C1 74DA3822D1BF
